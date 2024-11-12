@@ -1,86 +1,65 @@
 [
   {
+    "id" : "1",
     "name" : "Leave Types",
     "module" : "Leaves",
-    "country" : "USA",
-    "countryFlagImg" : "assets/country-flags/flag-us.png",
-    "status" : "Draft"
+    "country": "USA",
+    "countryImgUrl" : "assets/country-flags/flag-usa.png",
+    "status" : "Draft",
+    "leaveIds" : ["1", "2", "3", "4", "5"]
   },
   {
+    "id" : "2",
     "name" : "Leave Types",
     "module" : "Leaves",
-    "country" : "Jordan",
-    "countryFlagImg" : "assets/country-flags/flag-jordan.png",
-    "status" : "Active"
+    "country": "Jordan",
+    "countryImgUrl" : "assets/country-flags/flag-jordan.png",
+    "status" : "Active",
+    "leaveIds" : []
   },
   {
+    "id" : "3",
     "name" : "Country General",
     "module" : "Attendance",
-    "country" : "Saudi Arabia",
-    "countryFlagImg" : "assets/country-flags/flag-saudi-arabia.png",
-    "status" : "Draft"
+    "country": "Saudi Arabia",
+    "countryImgUrl" : "assets/country-flags/flag-saudi-arabia.png",
+    "status" : "Draft",
+    "leaveIds" : []
   },
   {
+    "id" : "4",
     "name" : "Time Tracking",
     "module" : "Attendance",
-    "country" : "Armenia",
-    "countryFlagImg" : "assets/country-flags/flag-armenia.png",
-    "status" : "Inactive"
+    "country": "Armenia",
+    "countryImgUrl" : "assets/country-flags/flag-armenia.png",
+    "status" : "Inactive",
+    "leaveIds" : []
   },
   {
+    "id" : "5",
     "name" : "Time Tracking",
     "module" : "Leaves",
-    "country" : "Jordan",
-    "countryFlagImg" : "assets/country-flags/flag-jordan.png",
-    "status" : "Ready"
+    "country": "Jordan",
+    "countryImgUrl" : "assets/country-flags/flag-jordan.png",
+    "status" : "Ready",
+    "leaveIds" : []
   },
   {
+    "id" : "6",
     "name" : "Time Tracking",
     "module" : "Attendance",
-    "country" : "Armenia",
-    "countryFlagImg" : "assets/country-flags/flag-armenia.png",
-    "status" : "Inactive"
+    "country": "Armenia",
+    "countryImgUrl" : "assets/country-flags/flag-armenia.png",
+    "status" : "Inactive",
+    "leaveIds" : []
   },
   {
+    "id" : "7",
     "name" : "Time Tracking",
     "module" : "Leaves",
-    "country" : "Jordan",
-    "countryFlagImg" : "assets/country-flags/flag-jordan.png",
-    "status" : "Ready"
-  },
-  {
-    "name" : "Leave Types",
-    "module" : "Leaves",
-    "country" : "USA",
-    "countryFlagImg" : "assets/country-flags/flag-us.png",
-    "status" : "Draft"
-  },
-  {
-    "name" : "Leave Types",
-    "module" : "Leaves",
-    "country" : "Jordan",
-    "countryFlagImg" : "assets/country-flags/flag-jordan.png",
-    "status" : "Active"
-  },
-  {
-    "name" : "Leave Types",
-    "module" : "Leaves",
-    "country" : "USA",
-    "countryFlagImg" : "assets/country-flags/flag-us.png",
-    "status" : "Draft"
-  },
-  {
-    "name" : "Country General",
-    "module" : "Attendance",
-    "country" : "Saudi Arabia",
-    "countryFlagImg" : "assets/country-flags/flag-saudi-arabia.png",
-    "status" : "Draft"
-  },
-  {
-    "name" : "Leave Types",
-    "module" : "Leaves",
-    "country" : "Jordan",
-    "countryFlagImg" : "assets/country-flags/flag-jordan.png",
-    "status" : "Active"
+    "country": "Jordan",
+    "countryImgUrl" : "assets/country-flags/flag-jordan.png",
+    "status" : "Ready",
+    "leaveIds" : []
   }
 ]

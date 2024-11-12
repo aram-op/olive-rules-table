@@ -1,7 +1,13 @@
 export type Rule = {
+  id: string,
   name: string,
   module: string,
   country: string,
-  countryFlagImg: string,
-  status: string
+  countryImgUrl: string,
+  status: string,
+  leaveIds: string[]
 };
+
+export function isRule(obj: any): obj is Rule {
+  return obj && typeof obj.module === 'string';
+}

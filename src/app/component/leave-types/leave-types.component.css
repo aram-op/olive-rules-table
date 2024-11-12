@@ -1,0 +1,31 @@
+.heading-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  min-width: fit-content;
+}
+
+h1 {
+  color: #000000;
+  font-family: var(--main-font);
+  font-size: 26px;
+  font-weight: 700;
+  text-wrap: nowrap;
+  margin-right: 50px;
+}
+
+.create-button {
+  background-color: var(--rules-search-color);
+  color: #ffffff;
+  height: 50px;
+  width: 240px;
+  font-family: var(--main-font);
+  box-shadow: none;
+  font-weight: 600;
+  font-size: 20px;
+  --mat-fab-ripple-color: var(--paginator-text-color);
+  --mdc-extended-fab-container-shape: 8px;
+  --mdc-extended-fab-focus-container-elevation-shadow: 0;
+  --mdc-extended-fab-hover-container-elevation-shadow: 0;
+  --mdc-extended-fab-pressed-container-elevation-shadow: 0;
+}

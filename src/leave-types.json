@@ -1,0 +1,38 @@
+[
+  {
+    "id" :  "1",
+    "name" : "Annual",
+    "validity": "Limited",
+    "status" : "Draft"
+  },
+  {
+    "id" :  "2",
+    "name" : "Sick",
+    "validity": "Unlimited",
+    "status" : "Active"
+  },
+  {
+    "id" :  "3",
+    "name" : "Maternity",
+    "validity": "Unlimited",
+    "status" : "Inactive"
+  },
+  {
+    "id" :  "4",
+    "name" : "Pilgrimage",
+    "validity": "Unlimited",
+    "status" : "Draft"
+  },
+  {
+    "id" :  "5",
+    "name" : "Not Paid",
+    "validity": "Unlimited",
+    "status" : "Draft"
+  },
+  {
+    "id" :  "6",
+    "name" : "Annual",
+    "validity": "Limited",
+    "status" : "Draft"
+  }
+]
