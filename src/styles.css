@@ -1,3 +1,26 @@
 :root {
-  --header-font : Nunito Sans;
+  --main-background-color: #F7F7F7;
+  --main-font: Nunito Sans, sans-serif;
+  --paginator-font: Poppins, sans-serif;
+  --paginator-text-color: #747474;
+  --rules-search-color: #8D8D8D;
+  --table-header-color: #E8E8E8;
+  --table-module-text-field-color: #8B8B8B;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--main-background-color);
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: Nunito Sans, sans-serif;
+  margin: 0;
 }

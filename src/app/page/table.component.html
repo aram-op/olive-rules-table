@@ -1,0 +1,54 @@
+<div class="rules-search-container">
+  <mat-form-field appearance="outline" class="rules-search">
+    <input matInput type="text" placeholder="Search" [formControl]="searchInput">
+    <mat-icon matSuffix>
+    <span class="material-symbols-outlined">
+      search
+    </span>
+    </mat-icon>
+  </mat-form-field>
+</div>
+
+<div class="table-container">
+  <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="rule-name">
+      <th class="name-column" mat-header-cell *matHeaderCellDef>Rule Name</th>
+      <td class="name-column" mat-cell *matCellDef="let rule">{{ rule.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="module">
+      <th class="module-column" mat-header-cell *matHeaderCellDef>Module</th>
+      <td class="module-column module-cell" mat-cell *matCellDef="let rule">
+        <div class="module-cell-text-container">
+          {{ rule.module }}
+        </div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="country">
+      <th class="country-column" mat-header-cell *matHeaderCellDef>Country</th>
+      <td class="country-column" mat-cell *matCellDef="let rule">
+        <img class="country-flag" [src]="rule.countryFlagImg"/>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <th class="status-column" mat-header-cell *matHeaderCellDef>Status</th>
+      <td class="status-column" mat-cell *matCellDef="let rule">{{ rule.status }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th class="actions-column" mat-header-cell *matHeaderCellDef>Actions</th>
+      <td class="actions-cell actions-column" mat-cell *matCellDef>
+        <button>
+          <img class="actions" alt="actions-icon" src="assets/actions.svg">
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
