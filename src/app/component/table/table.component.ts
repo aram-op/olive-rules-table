@@ -12,8 +12,8 @@ import {
   MatTable,
   MatTableDataSource
 } from '@angular/material/table';
-import rules from '../../rules.json';
-import {Rule} from '../model/rule.model';
+import rules from '../../../rules.json';
+import {Rule} from '../../model/rule.model';
 import {MatPaginator} from '@angular/material/paginator';
 import {NgOptimizedImage} from '@angular/common';
 import {MatFormField, MatInput, MatSuffix} from '@angular/material/input';
@@ -42,8 +42,8 @@ import {MatIcon} from '@angular/material/icon';
     MatIcon,
     MatSuffix
   ],
-  templateUrl: '../page/table.component.html',
-  styleUrl: '../styles/table.component.css'
+  templateUrl: './table.component.html',
+  styleUrl: './table.component.css'
 })
 export class TableComponent implements AfterViewInit {
   dataSource = new MatTableDataSource<Rule>(rules);

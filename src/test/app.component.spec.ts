@@ -1,5 +1,5 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {AppComponent} from '../app/component/app.component';
+import {AppComponent} from '../app/component/app/app.component';
 import {By} from '@angular/platform-browser';
 import {DebugElement} from '@angular/core';
 
