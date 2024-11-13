@@ -12,16 +12,27 @@ import {
   MatTable,
   MatTableDataSource
 } from '@angular/material/table';
-import {MatPaginator} from '@angular/material/paginator';
+import {MatPaginator, MatPaginatorIntl} from '@angular/material/paginator';
 import {NgOptimizedImage, NgTemplateOutlet} from '@angular/common';
 import {MatFormField, MatInput, MatSuffix} from '@angular/material/input';
 import {FormControl, ReactiveFormsModule} from '@angular/forms';
 import {MatIcon} from '@angular/material/icon';
 import {TableData} from '../../model/table-data.model';
 
+const customPaginatorIntl = new MatPaginatorIntl();
+customPaginatorIntl.getRangeLabel = (page: number, pageSize: number, length: number) => {
+  const start = page * pageSize + 1;
+  const end = (page + 1) * pageSize > length ? length : (page + 1) * pageSize;
+
+  return `${start} - ${end} out of ${length}`
+}
+
 @Component({
   selector: 'app-table',
   standalone: true,
+  providers: [
+    {provide: MatPaginatorIntl, useValue: customPaginatorIntl}
+  ],
   imports: [
     MatTable,
     MatColumnDef,

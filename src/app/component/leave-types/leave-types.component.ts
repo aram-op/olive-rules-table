@@ -1,14 +1,14 @@
-import {Component, inject, OnInit, signal} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import RULES from '../../../rules.json';
 import LEAVE_TYPES from '../../../leave-types.json'
 import {ActivatedRoute} from '@angular/router';
 import {LeaveType} from '../../model/leave-type.model';
-import {Rule} from '../../model/rule.model';
 import {TableComponent} from '../table/table.component';
 import {MatButton, MatFabButton} from '@angular/material/button';
 import {MatIcon} from '@angular/material/icon';
 import {MatPrefix} from '@angular/material/form-field';
 import {TableData} from '../../model/table-data.model';
+import {Rule} from '../../model/rule.model';
 
 @Component({
   selector: 'app-leave-types',
@@ -25,9 +25,9 @@ import {TableData} from '../../model/table-data.model';
 })
 export class LeaveTypesComponent implements OnInit {
   route = inject(ActivatedRoute);
-  ruleId = '';
+  ruleId: string = '';
+  country: string = '';
   data: LeaveType[] = [];
-  rule = signal<Rule>({country: '', name: '', id: '', status: '', leaveIds: [], countryImgUrl: '', module: ''});
   tableData: TableData[] = [];
   columnsToDisplay = ['name', 'validity', 'status', 'actions'];
   columnHeadersToDisplay = new Map<string, string>;
@@ -40,15 +40,12 @@ export class LeaveTypesComponent implements OnInit {
   }
 
   setData() {
-    const rule = RULES.find(rule => rule.id === this.ruleId);
+    const rule: Rule | undefined = RULES.find(rule => rule.id === this.ruleId);
 
-    if (rule) {
-      this.rule.set(rule);
-    }
+    if(!rule) return;
 
-    const leaveIds = rule ? rule.leaveIds : [];
-
-    this.data = LEAVE_TYPES.filter(leaveType => leaveIds.includes(leaveType.id));
+    this.country = rule.country;
+    this.data = LEAVE_TYPES.filter(leaveType => rule.leaveIds.includes(leaveType.id));
 
     for (let leaveType of this.data) {
       const templates = new Map<string, string>;

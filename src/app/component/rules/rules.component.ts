@@ -15,13 +15,11 @@ import {TableData} from '../../model/table-data.model';
 })
 export class RulesComponent {
   private router = inject(Router);
-  data: TableData[];
+  data: TableData[] = [];
   columnsToDisplay = ['name', 'module', 'country', 'status', 'actions'];
   columnHeadersToDisplay = new Map<string, string>;
 
   constructor() {
-    this.data = [];
-
     for (let rule of RULES) {
       const templates = new Map<string, string>;
 

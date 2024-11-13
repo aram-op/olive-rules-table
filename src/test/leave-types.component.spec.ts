@@ -75,18 +75,6 @@ describe('LeaveTypesComponent', () => {
   });
 
   describe('.setData()', () => {
-    it('should set the rule property to rule found with id', () => {
-      expect(component.rule()).toEqual({
-        'id': '1',
-        'name': 'Leave Types',
-        'module': 'Leaves',
-        'country': 'USA',
-        'countryImgUrl': 'assets/country-flags/flag-usa.png',
-        'status': 'Draft',
-        'leaveIds': ['1', '2', '3', '4', '5']
-      });
-    });
-
     it('should set data to leave types that the rule has', () => {
       expect(component.data).toEqual(expectedLeaveTypes);
     });
