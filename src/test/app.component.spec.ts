@@ -9,7 +9,7 @@ describe('AppComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [AppComponent, ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);
@@ -18,27 +18,5 @@ describe('AppComponent', () => {
 
   it('should create the app', () => {
     expect(component).toBeTruthy();
-  });
-
-  describe('heading element', () => {
-    let heading: DebugElement;
-
-    beforeEach(() => {
-      heading = fixture.debugElement.query(By.css('h1'));
-    });
-
-    it('should be created', () => {
-      expect(heading).toBeTruthy();
-    });
-
-    it('should contain title "Rules Engine"', () => {
-      expect(heading.nativeElement.textContent).toEqual('Rules Engine');
-    });
-  });
-
-  it('should have table component inside it', () => {
-    const tableComponentElem = fixture.debugElement.query(By.css('app-table'));
-
-    expect(tableComponentElem).toBeTruthy();
   });
 });

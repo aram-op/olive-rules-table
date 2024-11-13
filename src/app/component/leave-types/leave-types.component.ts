@@ -67,6 +67,5 @@ export class LeaveTypesComponent implements OnInit {
     this.columnHeadersToDisplay.set('validity', 'Validity');
     this.columnHeadersToDisplay.set('status', 'Status');
     this.columnHeadersToDisplay.set('actions', 'Actions');
-
   }
 }
