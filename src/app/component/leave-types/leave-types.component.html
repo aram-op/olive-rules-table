@@ -10,4 +10,8 @@
   </button>
 </div>
 
-<app-table [data]="data"/>
+<app-table
+  [data]="tableData"
+  [displayedColumns]="columnsToDisplay"
+  [headers]="columnHeadersToDisplay"
+/>

@@ -13,10 +13,11 @@ import {
   MatTableDataSource
 } from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
-import {NgOptimizedImage} from '@angular/common';
+import {NgOptimizedImage, NgTemplateOutlet} from '@angular/common';
 import {MatFormField, MatInput, MatSuffix} from '@angular/material/input';
 import {FormControl, ReactiveFormsModule} from '@angular/forms';
 import {MatIcon} from '@angular/material/icon';
+import {TableData} from '../../model/table-data.model';
 
 @Component({
   selector: 'app-table',
@@ -38,24 +39,24 @@ import {MatIcon} from '@angular/material/icon';
     MatFormField,
     ReactiveFormsModule,
     MatIcon,
-    MatSuffix
+    MatSuffix,
+    NgTemplateOutlet
   ],
   templateUrl: './table.component.html',
   styleUrl: './table.component.css'
 })
 export class TableComponent implements AfterViewInit, OnInit {
-  @Input({required: true}) data!: any[];
+  @Input({required: true}) displayedColumns!: string[];
+  @Input({required: true}) data!: TableData[];
+  @Input({required: true}) headers!: Map<string, string>
   @Output() rowSelected = new EventEmitter();
 
-  columns: any[] = [];
-  displayedColumns: any[] = [];
   dataSource!: MatTableDataSource<any>;
   searchInput = new FormControl('');
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   ngOnInit() {
-    this.setColumns();
     this.dataSource = new MatTableDataSource(this.data);
   }
 
@@ -66,44 +67,4 @@ export class TableComponent implements AfterViewInit, OnInit {
   onRowSelected(row: any) {
     this.rowSelected.emit(row);
   }
-
-  setColumns() {
-    if (this.data.length == 0) return;
-
-    for (let propName of Object.keys(this.data[0])) {
-      if (propName === 'id' || propName === 'country' || propName.includes('Id')) continue;
-
-      if (propName.includes('ImgUrl')) {
-        const colName = propName.replace('ImgUrl', '');
-
-        this.displayedColumns.push(this.camelToKebabCase(colName));
-
-        this.columns.push({
-          columnDef: this.camelToKebabCase(colName),
-          header: this.camelCaseToHeading(colName),
-          cell: (element: any) => `${element[propName] ? element[propName] : ''}`,
-          withImage: true
-        });
-      } else {
-        this.displayedColumns.push(this.camelToKebabCase(propName));
-
-        this.columns.push({
-          columnDef: this.camelToKebabCase(propName),
-          header: this.camelCaseToHeading(propName),
-          cell: (element: any) => `${element[propName] ? element[propName] : ''}`,
-          withImage: false
-        });
-      }
-    }
-    this.displayedColumns.push('actions');
-  }
-
-  camelToKebabCase(str: string) {
-    return str.replace(/[A-Z]+(?![a-z])|[A-Z]/g, (match, found) => (found ? '-' : '') + match.toLowerCase())
-  }
-
-  camelCaseToHeading(str: string) {
-    return str.replace(/([A-Z])/g, ' $1').replace(/^./, (str) => str.toUpperCase());
-  }
-
 }

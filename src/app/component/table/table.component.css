@@ -30,6 +30,7 @@ th {
   font-weight: 400;
   overflow: auto;
   padding: 0 50px;
+  text-wrap: nowrap;
 }
 
 .mat-mdc-row {
@@ -47,66 +48,7 @@ td {
   font-size: 18px;
   font-weight: 400;
   padding: 0 50px;
-}
-
-td .cell-image {
-  border-radius: 50%;
-  border: 2px solid #ffffff;
-  box-shadow: 0px 4px 4px 0px #00000040;
-  height: 30px;
-  margin-left: 20px;
-  width: 30px;
-}
-
-.module-cell-text-container {
-  -webkit-user-select: none;
-  align-items: center;
-  background-color: var(--table-module-text-field-color);
-  border-radius: 8px;
-  color: #ffffff;
-  display: flex;
-  height: 31px;
-  justify-content: center;
-  min-width: 127px;
-  user-select: none;
-  width: fit-content;
-}
-
-.module-cell {
-  padding-left: 35px;
-}
-
-.name-column, .module-column {
-  white-space: nowrap;
-  width: 25%;
-}
-
-.country-column, .status-column {
-  white-space: nowrap;
-  width: 20%;
-}
-
-.actions-column {
-  padding-right: 60px;
-  width: 10%;
-}
-
-.actions-cell {
-  padding-right: 50px;
-  text-align: end;
-}
-
-td button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  height: 25px;
-  width: 25px;
-}
-
-td .actions-icon {
-  height: 25px;
-  width: 25px;
+  text-wrap: nowrap;
 }
 
 mat-paginator {
@@ -160,4 +102,13 @@ mat-paginator {
 
 .mat-mdc-row:hover {
   filter: brightness(95%);
+}
+
+.mat-column-actions {
+  width: 12%;
+  text-align: end;
+}
+
+.mat-mdc-header-cell.mat-column-actions {
+  text-align: start;
 }

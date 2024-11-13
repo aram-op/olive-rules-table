@@ -2,4 +2,9 @@
   <h1>Rules Engine</h1>
 </div>
 
-<app-table [data] = "data" (rowSelected)="navigateToLeavesPage($event)"/>
+<app-table
+  [data]="data"
+  [displayedColumns]="columnsToDisplay"
+  [headers]="columnHeadersToDisplay"
+  (rowSelected)="navigateToLeavesPage($event)"
+/>

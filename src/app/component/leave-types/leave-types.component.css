@@ -29,3 +29,11 @@ h1 {
   --mdc-extended-fab-hover-container-elevation-shadow: 0;
   --mdc-extended-fab-pressed-container-elevation-shadow: 0;
 }
+
+:host ::ng-deep .actions-icon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+}
