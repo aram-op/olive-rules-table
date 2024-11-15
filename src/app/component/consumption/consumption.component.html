@@ -1,0 +1,26 @@
+<form [formGroup]="form">
+  <h2>Consumption</h2>
+
+  <fieldset>
+    <mat-radio-group class="consumption-type" formControlName="consumptionType">
+      <mat-radio-button value="accural">Accrual</mat-radio-button>
+      <mat-radio-button value="accumulative">Accumulative</mat-radio-button>
+    </mat-radio-group>
+
+    <mat-radio-group formControlName="unusedBalance">
+      <mat-label>Unused Balance:</mat-label>
+      <div class="unused-balance-radio-container">
+        <mat-radio-button value="wave-out">Wave out</mat-radio-button>
+        <mat-radio-button value="cashement">Cashement</mat-radio-button>
+        <mat-radio-button value="carry-over">Carry over</mat-radio-button>
+      </div>
+    </mat-radio-group>
+
+    <div class="frequency-container">
+      <mat-label>Frequency Number:</mat-label>
+      <mat-form-field appearance="outline">
+        <input matInput type="number" formControlName="frequencyNumber">
+      </mat-form-field>
+    </div>
+  </fieldset>
+</form>

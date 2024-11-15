@@ -1,0 +1,104 @@
+<form [formGroup]="balanceForm">
+  <h2>Balance</h2>
+
+  <div class="balance-input-container">
+    <label>Balance:</label>
+    <div class="combined-input">
+      <input class="balance-number" formControlName="balanceNumber" placeholder="00">
+      <select class="balance-dropdown" formControlName="balanceType">
+        <option value="day">D</option>
+        <option value="year">Y</option>
+        <option value="month">M</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="other-balance-options-container">
+    @if(isThroughBalance) {
+      <mat-checkbox class="conditional-checkbox" formControlName="conditional">Conditional</mat-checkbox>
+
+      <div class="balance-conditions-container">
+        <div class="balance-conditions">
+          <label>Balance Conditions:</label>
+
+          <mat-form-field appearance="outline">
+            <mat-select formControlName="balanceCondition">
+              <mat-option value="greater">Greater Than</mat-option>
+              <mat-option value="lesser">Lesser Than</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <div class="combined-input">
+            <input formControlName="balanceConditionsNumber" placeholder="0">
+            <select class="balance-dropdown" formControlName="balanceConditionsType">
+              <option value="year">Y</option>
+              <option value="month">M</option>
+              <option value="day">D</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="balance-input-container">
+          <label>Balance:</label>
+          <div class="combined-input">
+            <input class="balance-number" formControlName="conditionalBalanceNumber" placeholder="00">
+            <select class="balance-dropdown" formControlName="conditionalBalanceType">
+              <option value="day">D</option>
+              <option value="year">Y</option>
+              <option value="month">M</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    }
+
+    <mat-checkbox formControlName="extendBalance">Extend Balance</mat-checkbox>
+
+    <div class="extended-balance-container">
+
+      <label class="disabled-label" for="extendedBalanceNumber">Extended Balance:</label>
+      <div class="combined-input">
+        <input formControlName="extendedBalanceNumber" placeholder="00" id="extendedBalanceNumber">
+        <select class="balance-dropdown" formControlName="extendedBalanceType">
+          <option value="day">D</option>
+          <option value="year">Y</option>
+          <option value="month">M</option>
+        </select>
+      </div>
+    </div>
+
+    <mat-checkbox formControlName="canBeOverridden">Balance Can Be Overridden</mat-checkbox>
+  </div>
+
+  @if(isThroughBalance) {
+    <div class="frequency-container">
+      <div class="frequency-input-container">
+        <label>Frequency:</label>
+
+        <mat-form-field appearance="outline">
+          <mat-select formControlName="frequency">
+            <mat-option value="yearly">Yearly</mat-option>
+            <mat-option value="monthly">Monthly</mat-option>
+            <mat-option value="once">Once</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="frequency-date-container">
+        <label>Frequency Start:</label>
+
+        <mat-form-field appearance="outline">
+          <input matInput [matDatepicker]="picker" formControlName="frequencyStart">
+          <mat-datepicker-toggle matIconSuffix [for]="picker">
+            <mat-icon matDatepickerToggleIcon>
+            <span class="material-symbols-outlined">
+            today
+          </span>
+            </mat-icon>
+          </mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+  }
+</form>

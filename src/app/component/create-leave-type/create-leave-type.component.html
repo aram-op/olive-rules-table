@@ -1,0 +1,102 @@
+<h1>Rules Engine > {{rule?.name}} - {{rule?.country}} > Create New</h1>
+
+<form [formGroup]="form" (submit)="onSubmit()">
+  <fieldset class="name-fieldset">
+    <h2>Name</h2>
+    <mat-form-field appearance="outline">
+      <input formControlName="name" matInput>
+    </mat-form-field>
+  </fieldset>
+
+  <fieldset class="basic-info-fieldset">
+    <h2>Basic Info</h2>
+
+    <div class="basic-info-container">
+      <div class="form-radio-container">
+        <mat-radio-group formControlName="type">
+          <mat-label>Type:</mat-label>
+          <mat-radio-button value="paid">Paid</mat-radio-button>
+          <mat-radio-button value="not-paid">Not paid</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group class="entitled-radio-group" formControlName="entitled">
+          <mat-label>Entitled:</mat-label>
+          <mat-radio-button value="through-balance">Through balance</mat-radio-button>
+          <mat-radio-button value="event-based">Event based</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group formControlName="docsRequired">
+          <mat-label>Docs Required:</mat-label>
+          <mat-radio-button value="true">Yes</mat-radio-button>
+          <mat-radio-button value="false">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group formControlName="gracePeriod">
+          <mat-label>Grace Period:</mat-label>
+          <mat-radio-button value="true">Yes</mat-radio-button>
+          <mat-radio-button value="false">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group formControlName="dispute">
+          <mat-label>Dispute:</mat-label>
+          <mat-radio-button value="true">Yes</mat-radio-button>
+          <mat-radio-button value="false">No</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group formControlName="validity">
+          <mat-label>Validity:</mat-label>
+          <mat-radio-button value="true">Yes</mat-radio-button>
+          <mat-radio-button value="false">No</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <div class="form-select-container">
+        <div class="select-container">
+          <mat-label for="unit-select">Unit:</mat-label>
+          <mat-form-field appearance="outline" >
+            <mat-select placeholder="Select" formControlName="unit" id="unit-select">
+              <mat-option value="days">Days</mat-option>
+              <mat-option value="hours">Hours</mat-option>
+              <mat-option value="days&hours">Days & Hours</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="select-container">
+          <mat-label for="gender-select">Gender:</mat-label>
+          <mat-form-field appearance="outline">
+            <mat-select placeholder="Select" formControlName="gender" id="gender-select">
+              <mat-option value="male">Male</mat-option>
+              <mat-option value="female">Female</mat-option>
+              <mat-option value="all">All</mat-option>
+              <mat-option value="other">Other</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="select-container">
+          <mat-label for="employment-type-select">Employment Type:</mat-label>
+          <mat-form-field appearance="outline">
+            <mat-select placeholder="Select" formControlName="employmentType" id="employment-type-select">
+              <mat-option value="full-time">Full Time</mat-option>
+              <mat-option value="part-time">Part Time</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  @if(isBalanceDisplayed) {
+    <app-balance [isThroughBalance]="isThroughBalance"/>
+  }
+
+  @if(isConsumptionDisplayed) {
+    <app-consumption/>
+  }
+
+  <button type="button" mat-button class="cancel-button" (click)="onCancel()">Cancel</button>
+  <button type="button" mat-stroked-button class="save-button">Save As Draft</button>
+  <button type="submit" mat-flat-button class="create-button">Create</button>
+
+</form>

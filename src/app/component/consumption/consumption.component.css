@@ -1,0 +1,91 @@
+form {
+  height: 330px;
+  min-width: fit-content;
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 30px 48px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-family: var(--main-font);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32.74px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+mat-radio-group {
+  height: 48px;
+  display: flex;
+  flex-wrap: nowrap;
+  text-wrap: nowrap;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.frequency-container {
+  margin-top: 30px;
+}
+
+mat-form-field {
+  width: 232px;
+  --mat-form-field-container-vertical-padding: 10px;
+  --mat-form-field-container-height: 44px;
+  --mdc-outlined-text-field-container-shape: 8px;
+  --mdc-outlined-text-field-outline-color: #79747E47;
+  --mat-form-field-container-text-font: Roboto;
+  --mdc-outlined-text-field-input-text-color: #49454F;
+  --mdc-outlined-text-field-focus-outline-color: #79747E47;
+  --mdc-outlined-text-field-hover-outline-color: #79747E47;
+  --mdc-outlined-text-field-focus-outline-width: 2px;
+  --mdc-outlined-text-field-outline-width: 1px;
+  --mdc-outlined-text-field-caret-color: var(--balance-form-secondary-text-color);
+}
+
+.unused-balance-radio-container {
+  align-content: center;
+  display: flex;
+  width: 450px;
+  justify-content: space-between;
+}
+
+mat-label {
+  margin-right: 20px;
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+mat-radio-button {
+  --mat-radio-label-text-color: #565656;
+  --mat-radio-label-text-size: 16px;
+  --mat-radio-label-text-font: var(--main-font);
+  --mat-radio-label-text-weight: 400;
+  --mat-radio-ripple-color: var(--radio-color);
+  --mdc-radio-selected-focus-icon-color: var(--radio-color);
+  --mdc-radio-selected-hover-icon-color: var(--radio-color);
+  --mdc-radio-selected-icon-color: var(--radio-color);
+  --mdc-radio-selected-pressed-icon-color: var(--radio-color);
+  --mdc-radio-unselected-icon-color: var(--radio-color);
+  --mdc-radio-unselected-hover-icon-color: var(--radio-color);
+  --mdc-radio-unselected-focus-icon-color: var(--radio-color);
+  --mat-radio-checked-ripple-color: transparent;
+}
+
+.unused-balance-radio-container mat-radio-button {
+  --mat-radio-label-text-size: 14px;
+}
+
+.consumption-type {
+  width: 303px;
+  justify-content: space-between;
+}

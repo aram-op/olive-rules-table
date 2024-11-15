@@ -6,6 +6,9 @@
   --rules-search-color: #8D8D8D;
   --table-header-color: #E8E8E8;
   --table-module-text-field-color: #8B8B8B;
+  --radio-color: #565656;
+  --balance-form-secondary-color: #FAFAFA;
+  --balance-form-secondary-text-color: #545454;
 }
 
 * {

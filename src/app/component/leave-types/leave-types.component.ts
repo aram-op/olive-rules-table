@@ -1,7 +1,7 @@
 import {Component, inject, OnInit} from '@angular/core';
 import RULES from '../../../rules.json';
 import LEAVE_TYPES from '../../../leave-types.json'
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {LeaveType} from '../../model/leave-type.model';
 import {TableComponent} from '../table/table.component';
 import {MatButton, MatFabButton} from '@angular/material/button';
@@ -25,6 +25,7 @@ import {Rule} from '../../model/rule.model';
 })
 export class LeaveTypesComponent implements OnInit {
   route = inject(ActivatedRoute);
+  router = inject(Router);
   ruleId: string = '';
   country: string = '';
   data: LeaveType[] = [];
@@ -42,7 +43,7 @@ export class LeaveTypesComponent implements OnInit {
   setData() {
     const rule: Rule | undefined = RULES.find(rule => rule.id === this.ruleId);
 
-    if(!rule) return;
+    if (!rule) return;
 
     this.country = rule.country;
     this.data = LEAVE_TYPES.filter(leaveType => rule.leaveIds.includes(leaveType.id));
@@ -64,5 +65,9 @@ export class LeaveTypesComponent implements OnInit {
     this.columnHeadersToDisplay.set('validity', 'Validity');
     this.columnHeadersToDisplay.set('status', 'Status');
     this.columnHeadersToDisplay.set('actions', 'Actions');
+  }
+
+  onCreateNew() {
+    this.router.navigate([`rules/${this.ruleId}/leave-types/create`]).then(() => window.location.reload());
   }
 }

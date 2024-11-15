@@ -17,8 +17,8 @@ h1 {
 .create-button {
   background-color: var(--rules-search-color);
   color: #ffffff;
-  height: 50px;
-  width: 240px;
+  height: 51px;
+  width: 232px;
   font-family: var(--main-font);
   box-shadow: none;
   font-weight: 600;

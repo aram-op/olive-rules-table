@@ -97,7 +97,9 @@ mat-paginator {
   --mdc-outlined-text-field-input-text-placeholder-color: var(--rules-search-color);
   --mdc-outlined-text-field-outline-color: var(--rules-search-color);
   --mdc-outlined-text-field-caret-color: var(--rules-search-color);
+  max-width: 453px;
   width: 40%;
+  margin-bottom: 10px;
 }
 
 .mat-mdc-row:hover {
