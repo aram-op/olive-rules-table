@@ -77,6 +77,9 @@ mat-checkbox {
   --mat-checkbox-label-text-font: var(--main-font);
   --mat-checkbox-label-text-size: 18px;
   --mat-checkbox-label-text-weight: 400;
+  --mdc-checkbox-selected-focus-icon-color: var(--radio-color);
+  --mdc-checkbox-selected-hover-icon-color: var(--radio-color);
+  --mdc-checkbox-selected-icon-color: var(--radio-color);
 }
 
 .conditional-checkbox {
@@ -233,8 +236,6 @@ mat-checkbox {
   'opsz' 20
 }
 
-
-
 .combined-input select:disabled {
   border-color: #CBCBCB;
   opacity: 0.8;
@@ -243,8 +244,4 @@ mat-checkbox {
 .combined-input input:disabled {
   border-color: #CBCBCB;
   opacity: 0.8;
-}
-
-.combined-input .disabled-label {
-  color: #cbcbcb;
 }

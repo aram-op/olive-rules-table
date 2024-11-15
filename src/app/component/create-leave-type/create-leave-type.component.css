@@ -11,7 +11,7 @@ h1 {
 }
 
 h2 {
-  height: 63px;
+  height: 58px;
   font-family: var(--main-font);
   font-size: 24px;
   font-weight: 600;
@@ -31,10 +31,13 @@ fieldset {
 
 .name-fieldset {
   margin-top: 100px;
+  height: 162px;
 }
 
 .name-fieldset mat-form-field {
   width: 100%;
+  --mat-form-field-container-height: 44px;
+  --mat-form-field-container-vertical-padding: 10px;
   --mdc-outlined-text-field-container-shape: 8px;
   --mdc-outlined-text-field-outline-color: #79747E47;
   --mdc-outlined-text-field-focus-outline-color: var(--table-module-text-field-color);
@@ -149,6 +152,8 @@ mat-radio-group mat-radio-button {
 }
 
 ::ng-deep.select-container mat-form-field {
+  width: 232px;
+  margin-left: 20px;
   --mdc-outlined-text-field-container-shape: 8px;
   --mat-form-field-container-height: 44px;
   --mat-form-field-container-vertical-padding: 9px;
