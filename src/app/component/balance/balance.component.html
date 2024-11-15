@@ -14,7 +14,7 @@
   </div>
 
   <div class="other-balance-options-container">
-    @if(isThroughBalance) {
+    @if (isThroughBalance) {
       <mat-checkbox class="conditional-checkbox" formControlName="conditional">Conditional</mat-checkbox>
 
       <div class="balance-conditions-container">
@@ -70,7 +70,7 @@
     <mat-checkbox formControlName="canBeOverridden">Balance Can Be Overridden</mat-checkbox>
   </div>
 
-  @if(isThroughBalance) {
+  @if (isThroughBalance) {
     <div class="frequency-container">
       <div class="frequency-input-container">
         <label>Frequency:</label>
@@ -91,9 +91,9 @@
           <input matInput [matDatepicker]="picker" formControlName="frequencyStart">
           <mat-datepicker-toggle matIconSuffix [for]="picker">
             <mat-icon matDatepickerToggleIcon>
-            <span class="material-symbols-outlined">
-            today
-          </span>
+              <span class="material-symbols-rounded">
+                today
+              </span>
             </mat-icon>
           </mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>

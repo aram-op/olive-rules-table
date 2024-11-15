@@ -229,14 +229,6 @@ mat-checkbox {
   --mat-icon-color: #000000;
 }
 
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 1,
-  'wght' 400,
-  'GRAD' -25,
-  'opsz' 20
-}
-
-
 .combined-input select:disabled {
   border-color: #CBCBCB;
   opacity: 0.8;
