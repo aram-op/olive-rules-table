@@ -1,6 +1,6 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {MatFormField, MatLabel} from '@angular/material/form-field';
-import {MatInput} from '@angular/material/input';
+import {MatInput, MatSuffix} from '@angular/material/input';
 import {MatRadioButton, MatRadioGroup} from '@angular/material/radio';
 import {MatOption, MatSelect} from '@angular/material/select';
 import {MatButton} from '@angular/material/button';
@@ -10,6 +10,13 @@ import {ConsumptionComponent} from '../consumption/consumption.component';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Rule} from '../../model/rule.model';
 import RULES from '../../../rules.json';
+import {
+  MatDatepicker,
+  MatDatepickerInput,
+  MatDatepickerToggle,
+  MatDatepickerToggleIcon
+} from '@angular/material/datepicker';
+import {MatIcon} from '@angular/material/icon';
 
 @Component({
   selector: 'app-create-leave-type',
@@ -25,7 +32,13 @@ import RULES from '../../../rules.json';
     MatButton,
     ReactiveFormsModule,
     BalanceComponent,
-    ConsumptionComponent
+    ConsumptionComponent,
+    MatDatepickerToggle,
+    MatDatepickerInput,
+    MatDatepicker,
+    MatIcon,
+    MatSuffix,
+    MatDatepickerToggleIcon
   ],
   templateUrl: './create-leave-type.component.html',
   styleUrl: './create-leave-type.component.css'
@@ -35,6 +48,7 @@ export class CreateLeaveTypeComponent implements OnInit {
   router = inject(Router);
   isBalanceDisplayed = false;
   isConsumptionDisplayed = false;
+  isDateRangeDisplayed = false;
   isThroughBalance = true;
   rule?: Rule;
 
@@ -46,6 +60,8 @@ export class CreateLeaveTypeComponent implements OnInit {
     gracePeriod: new FormControl(''),
     dispute: new FormControl(''),
     validity: new FormControl(''),
+    validityFrom: new FormControl(new Date()),
+    validityTo: new FormControl(new Date()),
     unit: new FormControl(''),
     gender: new FormControl(''),
     employmentType: new FormControl(''),
@@ -71,6 +87,12 @@ export class CreateLeaveTypeComponent implements OnInit {
         this.isBalanceDisplayed = true;
         this.isThroughBalance = false;
         this.isConsumptionDisplayed = false;
+      }
+
+      if (values.validity === 'limited') {
+        this.isDateRangeDisplayed = true;
+      } else {
+        this.isDateRangeDisplayed = false;
       }
     });
   }

@@ -48,12 +48,13 @@ fieldset {
 }
 
 .basic-info-fieldset {
-  height: 504px;
+  height: fit-content;
   font-family: var(--main-font);
 }
 
 .basic-info-container {
-  height: 381px;
+  min-height: 381px;
+  height: fit-content;
   display: flex;
   justify-content: space-between;
 }
@@ -66,6 +67,10 @@ fieldset {
 .form-radio-container {
   width: 60%;
   justify-content: space-between;
+}
+
+mat-radio-group {
+  margin-bottom: 18px;
 }
 
 mat-label, label {
@@ -207,5 +212,48 @@ button {
   --mdc-filled-button-container-color: var(--rules-search-color);
   --mdc-filled-button-label-text-size: 20px;
   --mdc-filled-button-label-text-weight: 400;
+}
+
+.date-range-container {
+  display: flex;
+  height: 35px;
+  width: 300px;
+  justify-content: space-between;
+  margin-left: 180px;
+}
+
+::ng-deep .material-symbols-rounded {
+  font-variation-settings: 'FILL' 0,
+  'wght' 300,
+  'GRAD' -50,
+  'opsz' 10
+}
+
+.datepicker {
+  --mat-form-field-container-vertical-padding: 6px;
+  --mat-form-field-container-height: 35px;
+  --mdc-outlined-text-field-container-shape: 8px;
+  --mdc-outlined-text-field-outline-width: 0.5px;
+  --mdc-outlined-text-field-outline-color: #A4A4A4;
+  --mdc-outlined-text-field-focus-outline-width: 1px;
+  --mdc-outlined-text-field-focus-outline-color: #A4A4A4;
+  --mdc-outlined-text-field-hover-outline-color: #A4A4A4;
+  --mdc-outlined-text-field-input-text-color: #A1A1A1;
+  --mat-icon-color: #8D8D8D;
+  width: 140px;
+}
+
+.datepicker mat-label {
+  color: #A1A1A1;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.datepicker input {
+  color: #A1A1A1;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
 }
 

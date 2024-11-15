@@ -60,6 +60,36 @@
           <mat-radio-button value="limited">Limited</mat-radio-button>
           <mat-radio-button value="unlimited">Unlimited</mat-radio-button>
         </mat-radio-group>
+
+        @if(isDateRangeDisplayed) {
+          <div class="date-range-container">
+            <mat-form-field appearance="outline" class="datepicker">
+              <mat-label>from</mat-label>
+              <input matInput [matDatepicker]="fromPicker" formControlName="validityFrom">
+              <mat-datepicker-toggle matIconSuffix [for]="fromPicker">
+                <mat-icon matDatepickerToggleIcon>
+              <span class="material-symbols-rounded">
+                calendar_today
+              </span>
+                </mat-icon>
+              </mat-datepicker-toggle>
+              <mat-datepicker #fromPicker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="datepicker">
+              <mat-label>to</mat-label>
+              <input matInput [matDatepicker]="toPicker" formControlName="validityTo">
+              <mat-datepicker-toggle matIconSuffix [for]="toPicker">
+                <mat-icon matDatepickerToggleIcon>
+              <span class="material-symbols-rounded">
+                calendar_today
+              </span>
+                </mat-icon>
+              </mat-datepicker-toggle>
+              <mat-datepicker #toPicker></mat-datepicker>
+            </mat-form-field>
+          </div>
+        }
       </div>
 
       <div class="form-select-container">

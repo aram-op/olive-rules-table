@@ -227,7 +227,13 @@ mat-checkbox {
 
 .frequency-date-container mat-icon {
   --mat-icon-color: #000000;
+  font-variation-settings: 'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 20
 }
+
+
 
 .combined-input select:disabled {
   border-color: #CBCBCB;
