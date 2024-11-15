@@ -14,39 +14,51 @@
     <div class="basic-info-container">
       <div class="form-radio-container">
         <mat-radio-group formControlName="type">
-          <mat-label>Type:</mat-label>
+          <div class="radio-label-container">
+            <mat-label>Type:</mat-label>
+          </div>
           <mat-radio-button value="paid">Paid</mat-radio-button>
           <mat-radio-button value="not-paid">Not paid</mat-radio-button>
         </mat-radio-group>
 
         <mat-radio-group class="entitled-radio-group" formControlName="entitled">
-          <mat-label>Entitled:</mat-label>
+          <div class="radio-label-container">
+            <mat-label>Entitled:</mat-label>
+          </div>
           <mat-radio-button value="through-balance">Through balance</mat-radio-button>
           <mat-radio-button value="event-based">Event based</mat-radio-button>
         </mat-radio-group>
 
         <mat-radio-group formControlName="docsRequired">
-          <mat-label>Docs Required:</mat-label>
+          <div class="radio-label-container">
+            <mat-label>Docs Required:</mat-label>
+          </div>
           <mat-radio-button value="true">Yes</mat-radio-button>
           <mat-radio-button value="false">No</mat-radio-button>
         </mat-radio-group>
 
         <mat-radio-group formControlName="gracePeriod">
-          <mat-label>Grace Period:</mat-label>
+          <div class="radio-label-container">
+            <mat-label>Grace Period:</mat-label>
+          </div>
           <mat-radio-button value="true">Yes</mat-radio-button>
           <mat-radio-button value="false">No</mat-radio-button>
         </mat-radio-group>
 
         <mat-radio-group formControlName="dispute">
-          <mat-label>Dispute:</mat-label>
+          <div class="radio-label-container">
+            <mat-label>Dispute:</mat-label>
+          </div>
           <mat-radio-button value="true">Yes</mat-radio-button>
           <mat-radio-button value="false">No</mat-radio-button>
         </mat-radio-group>
 
         <mat-radio-group formControlName="validity">
-          <mat-label>Validity:</mat-label>
-          <mat-radio-button value="true">Yes</mat-radio-button>
-          <mat-radio-button value="false">No</mat-radio-button>
+          <div class="radio-label-container">
+            <mat-label>Validity:</mat-label>
+          </div>
+          <mat-radio-button value="limited">Limited</mat-radio-button>
+          <mat-radio-button value="unlimited">Unlimited</mat-radio-button>
         </mat-radio-group>
       </div>
 

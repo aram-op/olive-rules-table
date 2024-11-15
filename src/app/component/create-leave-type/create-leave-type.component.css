@@ -1,3 +1,7 @@
+form {
+  min-width: fit-content;
+}
+
 h1 {
   color: #000000;
   font-family: var(--main-font);
@@ -75,9 +79,11 @@ mat-label, label {
 
 mat-radio-button {
   --mat-radio-label-text-color: var(--radio-color);
+  --mat-radio-label-text-font: var(--main-font);
   --mat-radio-checked-ripple-color: transparent;
   --mat-radio-label-text-weight: 400;
   --mat-radio-label-text-size: 14px;
+  --mat-radio-label-text-line-height: 19px;
   --mat-radio-ripple-color: var(--radio-color);
   --mdc-radio-selected-focus-icon-color: var(--radio-color);
   --mdc-radio-selected-hover-icon-color: var(--radio-color);
@@ -104,7 +110,18 @@ mat-radio-button {
 }
 
 mat-radio-group {
+  display: flex;
+  align-items: center;
   height: 48px;
+}
+
+.radio-label-container {
+  display: block;
+  width: 170px;
+}
+
+mat-radio-group mat-radio-button {
+  width: 190px;
 }
 
 
