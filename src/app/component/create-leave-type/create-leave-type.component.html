@@ -102,13 +102,13 @@
 
   @defer (when isBalanceDisplayed) {
     @if (isBalanceDisplayed) {
-      <app-balance [isThroughBalance]="isThroughBalance"/>
+      <app-balance [isThroughBalance]="isThroughBalance" (formValueChanged)="setBalanceForm($event)"/>
     }
   }
 
   @defer (when isConsumptionDisplayed) {
     @if (isConsumptionDisplayed) {
-      <app-consumption/>
+      <app-consumption (formValueChanged)="setConsumptionForm($event)"/>
     }
   }
 

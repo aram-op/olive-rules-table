@@ -49,7 +49,8 @@ export class CreateLeaveTypeComponent implements OnInit {
     unit: new FormControl(''),
     gender: new FormControl(''),
     employmentType: new FormControl(''),
-    balance: new FormGroup({})
+    balance: new FormGroup({}),
+    consumption: new FormGroup({})
   });
 
   ngOnInit() {
@@ -75,9 +76,18 @@ export class CreateLeaveTypeComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log(this.form);
   }
 
   onCancel() {
     this.router.navigate([`rules/${this.rule?.id}/leave-types`]);
+  }
+
+  setBalanceForm(balanceForm: FormGroup) {
+    this.form.controls.balance = balanceForm;
+  }
+
+  setConsumptionForm(consumptionForm: FormGroup) {
+    this.form.controls.consumption = consumptionForm;
   }
 }

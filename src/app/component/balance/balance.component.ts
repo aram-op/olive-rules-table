@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {MatFormField, MatLabel, MatSuffix} from '@angular/material/form-field';
 import {MatInput} from '@angular/material/input';
 import {MatOption, MatSelect} from '@angular/material/select';
@@ -37,6 +37,7 @@ import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 })
 export class BalanceComponent implements OnInit {
   @Input({required: true}) isThroughBalance!: boolean;
+  @Output() formValueChanged = new EventEmitter();
   balanceForm = new FormGroup({
     balanceNumber: new FormControl(''),
     balanceType: new FormControl('day'),
@@ -59,6 +60,7 @@ export class BalanceComponent implements OnInit {
     this.balanceForm.controls.extendedBalanceNumber.disable();
     this.balanceForm.controls.extendedBalanceType.disable();
 
+    this.formValueChanged.emit(this.balanceForm);
 
     this.balanceForm.valueChanges.subscribe((values) => {
       if (values.extendBalance) {
@@ -68,6 +70,7 @@ export class BalanceComponent implements OnInit {
         this.balanceForm.controls.extendedBalanceNumber.disable({emitEvent: false});
         this.balanceForm.controls.extendedBalanceType.disable({emitEvent: false});
       }
+      this.formValueChanged.emit(this.balanceForm);
     });
   }
 }
