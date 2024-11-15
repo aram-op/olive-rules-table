@@ -1,4 +1,4 @@
-<h1>Rules Engine > {{rule?.name}} - {{rule?.country}} > Create New</h1>
+<h1>Rules Engine > {{ rule?.name }} - {{ rule?.country }} > Create New</h1>
 
 <form [formGroup]="form" (submit)="onSubmit()">
   <fieldset class="name-fieldset">
@@ -53,7 +53,7 @@
       <div class="form-select-container">
         <div class="select-container">
           <mat-label for="unit-select">Unit:</mat-label>
-          <mat-form-field appearance="outline" >
+          <mat-form-field appearance="outline">
             <mat-select placeholder="Select" formControlName="unit" id="unit-select">
               <mat-option value="days">Days</mat-option>
               <mat-option value="hours">Hours</mat-option>
@@ -87,12 +87,17 @@
     </div>
   </fieldset>
 
-  @if(isBalanceDisplayed) {
-    <app-balance [isThroughBalance]="isThroughBalance"/>
+
+  @defer (when isBalanceDisplayed) {
+    @if (isBalanceDisplayed) {
+      <app-balance [isThroughBalance]="isThroughBalance"/>
+    }
   }
 
-  @if(isConsumptionDisplayed) {
-    <app-consumption/>
+  @defer (when isConsumptionDisplayed) {
+    @if (isConsumptionDisplayed) {
+      <app-consumption/>
+    }
   }
 
   <button type="button" mat-button class="cancel-button" (click)="onCancel()">Cancel</button>

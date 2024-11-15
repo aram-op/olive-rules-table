@@ -56,11 +56,10 @@ export class CreateLeaveTypeComponent implements OnInit {
     this.route.params.subscribe((params) => {
       const id = params['ruleId'];
 
-      if(id) {
+      if (id) {
         this.rule = RULES.find((rule) => rule.id === id);
       }
     });
-
 
     this.form.valueChanges.subscribe((values) => {
       if (values.entitled === 'through-balance') {
@@ -68,11 +67,9 @@ export class CreateLeaveTypeComponent implements OnInit {
         this.isThroughBalance = true;
         this.isConsumptionDisplayed = true;
       } else if (values.entitled === 'event-based') {
-        this.isThroughBalance = false;
         this.isBalanceDisplayed = true;
+        this.isThroughBalance = false;
         this.isConsumptionDisplayed = false;
-      } else {
-        this.isBalanceDisplayed = false;
       }
     });
   }
