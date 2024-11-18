@@ -124,6 +124,10 @@ mat-checkbox {
   --mdc-outlined-text-field-outline-width: 0.5px;
 }
 
+.select-panel.mat-mdc-select-panel {
+  background: #ffffff;
+}
+
 .balance-conditions {
   display: flex;
   align-items: center;

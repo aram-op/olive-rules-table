@@ -171,6 +171,10 @@ mat-radio-group mat-radio-button {
   --mat-select-trigger-text-weight: 500;
 }
 
+::ng-deep .select-panel.mat-mdc-select-panel {
+  background: #ffffff;
+}
+
 button {
   font-family: var(--main-font);
   border-radius: 8px;

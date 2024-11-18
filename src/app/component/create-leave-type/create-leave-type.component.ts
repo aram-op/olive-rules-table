@@ -94,6 +94,15 @@ export class CreateLeaveTypeComponent implements OnInit {
       } else {
         this.isDateRangeDisplayed = false;
       }
+
+      if (values.type === 'not-paid') {
+        this.form.controls.entitled.disable({emitEvent: false});
+        this.form.controls.entitled.setValue('');
+        this.isBalanceDisplayed = false;
+        this.isConsumptionDisplayed = false;
+      } else {
+        this.form.controls.entitled.enable({emitEvent: false});
+      }
     });
   }
 
