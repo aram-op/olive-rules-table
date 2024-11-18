@@ -1,17 +1,9 @@
-
 <form [formGroup]="balanceForm">
   <h2>Balance</h2>
 
   <div class="balance-input-container">
     <label>Balance:</label>
-    <div class="combined-input">
-      <input class="balance-number" formControlName="balanceNumber" placeholder="00">
-      <select class="balance-dropdown" formControlName="balanceType">
-        <option value="day">D</option>
-        <option value="year">Y</option>
-        <option value="month">M</option>
-      </select>
-    </div>
+    <app-balance-combined-input/>
   </div>
 
   <div class="other-balance-options-container">
@@ -29,26 +21,12 @@
             </mat-select>
           </mat-form-field>
 
-          <div class="combined-input">
-            <input formControlName="balanceConditionsNumber" placeholder="0">
-            <select class="balance-dropdown" formControlName="balanceConditionsType">
-              <option value="year">Y</option>
-              <option value="month">M</option>
-              <option value="day">D</option>
-            </select>
-          </div>
+          <app-balance-combined-input/>
         </div>
 
         <div class="balance-input-container">
           <label>Balance:</label>
-          <div class="combined-input">
-            <input class="balance-number" formControlName="conditionalBalanceNumber" placeholder="00">
-            <select class="balance-dropdown" formControlName="conditionalBalanceType">
-              <option value="day">D</option>
-              <option value="year">Y</option>
-              <option value="month">M</option>
-            </select>
-          </div>
+          <app-balance-combined-input/>
         </div>
       </div>
     }
@@ -57,14 +35,7 @@
 
     <div class="extended-balance-container">
       <label>Extended Balance:</label>
-      <div class="combined-input">
-        <input formControlName="extendedBalanceNumber" placeholder="00">
-        <select class="balance-dropdown" formControlName="extendedBalanceType">
-          <option value="day">D</option>
-          <option value="year">Y</option>
-          <option value="month">M</option>
-        </select>
-      </div>
+      <app-balance-combined-input [isDisabled$]="isExtendedBalanceDisabled$"/>
     </div>
 
     <mat-checkbox formControlName="canBeOverridden">Balance Can Be Overridden</mat-checkbox>

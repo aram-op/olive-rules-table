@@ -12,6 +12,8 @@ import {
 } from '@angular/material/datepicker';
 import {MatIcon} from '@angular/material/icon';
 import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
+import {BalanceCombinedInputComponent} from '../balance-combined-input/balance-combined-input.component';
+import {BehaviorSubject, of} from 'rxjs';
 
 @Component({
   selector: 'app-balance',
@@ -30,7 +32,8 @@ import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
     MatDatepickerToggle,
     MatIcon,
     MatDatepickerToggleIcon,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BalanceCombinedInputComponent
   ],
   templateUrl: './balance.component.html',
   styleUrl: './balance.component.css'
@@ -38,9 +41,9 @@ import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 export class BalanceComponent implements OnInit {
   @Input({required: true}) isThroughBalance!: boolean;
   @Output() formValueChanged = new EventEmitter();
+  isExtendedBalanceDisabled$ = new BehaviorSubject(true);
   balanceForm = new FormGroup({
-    balanceNumber: new FormControl(''),
-    balanceType: new FormControl('day'),
+    balance: new FormGroup({}),
     conditional: new FormControl(false),
     balanceCondition: new FormControl('greater'),
     balanceConditionsNumber: new FormControl(''),
@@ -64,13 +67,14 @@ export class BalanceComponent implements OnInit {
 
     this.balanceForm.valueChanges.subscribe((values) => {
       if (values.extendBalance) {
-        this.balanceForm.controls.extendedBalanceNumber.enable({emitEvent: false});
-        this.balanceForm.controls.extendedBalanceType.enable({emitEvent: false});
+        this.isExtendedBalanceDisabled$.next(false);
       } else {
-        this.balanceForm.controls.extendedBalanceNumber.disable({emitEvent: false});
-        this.balanceForm.controls.extendedBalanceType.disable({emitEvent: false});
+        this.isExtendedBalanceDisabled$.next(true);
       }
       this.formValueChanged.emit(this.balanceForm);
     });
   }
+
+  protected readonly of = of;
+  protected readonly BehaviorSubject = BehaviorSubject;
 }

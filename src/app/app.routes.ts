@@ -2,6 +2,7 @@ import {Routes} from '@angular/router';
 import {RulesComponent} from './component/rules/rules.component';
 import {LeaveTypesComponent} from './component/leave-types/leave-types.component';
 import {CreateLeaveTypeComponent} from './component/create-leave-type/create-leave-type.component';
+import {BalanceCombinedInputComponent} from './component/balance-combined-input/balance-combined-input.component';
 
 export const routes: Routes = [
   {
@@ -20,5 +21,9 @@ export const routes: Routes = [
   {
     path: 'rules/:ruleId/leave-types/create',
     component: CreateLeaveTypeComponent
+  },
+  {
+    path: 'combined',
+    component: BalanceCombinedInputComponent
   }
 ];

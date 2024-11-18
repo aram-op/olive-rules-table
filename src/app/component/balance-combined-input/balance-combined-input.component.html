@@ -1,0 +1,14 @@
+<form [formGroup]="form">
+  <mat-form-field appearance="outline" class="input-field">
+    <input matInput formControlName="amount" placeholder="00">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="select-field">
+    <mat-select panelClass="combined-input-select-panel" formControlName="timeOptions">
+      <mat-select-trigger>{{ form.controls.timeOptions.value?.toUpperCase() }}</mat-select-trigger>
+      <mat-option value="d">Days</mat-option>
+      <mat-option value="y">Years</mat-option>
+      <mat-option value="m">Months</mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>

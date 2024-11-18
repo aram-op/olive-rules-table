@@ -133,18 +133,8 @@ mat-checkbox {
   align-items: center;
 }
 
-.balance-conditions .combined-input {
+.balance-conditions app-balance-combined-input {
   margin-left: 25px;
-}
-
-.balance-conditions-container .combined-input input {
-  border-color: var(--balance-form-secondary-text-color);
-  color: var(--balance-form-secondary-text-color);
-}
-
-.balance-conditions-container .balance-dropdown {
-  border-color: var(--balance-form-secondary-text-color);
-  color: var(--balance-form-secondary-text-color);
 }
 
 .balance-conditions-container .balance-input-container {
@@ -157,7 +147,7 @@ mat-checkbox {
   justify-content: flex-start;
 }
 
-.balance-conditions-container .balance-input-container .combined-input {
+.balance-conditions-container .balance-input-container app-balance-combined-input {
   margin-left: 25px;
 }
 
@@ -181,18 +171,8 @@ mat-checkbox {
   color: var(--balance-form-secondary-text-color);
 }
 
-.extended-balance-container .combined-input {
+.extended-balance-container app-balance-combined-input {
   margin-left: 30px;
-  border-color: var(--balance-form-secondary-text-color);
-}
-
-.extended-balance-container .balance-dropdown {
-  border-color: var(--balance-form-secondary-text-color);
-  color: var(--balance-form-secondary-text-color);
-}
-
-.extended-balance-container .combined-input input {
-  color: var(--balance-form-secondary-text-color);
 }
 
 .frequency-container {
@@ -238,14 +218,4 @@ mat-checkbox {
   'wght' 400,
   'GRAD' 0,
   'opsz' 20
-}
-
-.combined-input select:disabled {
-  border-color: #CBCBCB;
-  opacity: 0.8;
-}
-
-.combined-input input:disabled {
-  border-color: #CBCBCB;
-  opacity: 0.8;
 }
