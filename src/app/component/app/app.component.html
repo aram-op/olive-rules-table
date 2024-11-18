@@ -1,1 +1,32 @@
-<router-outlet />
+<mat-toolbar>
+  <div class="shape">
+
+  </div>
+  <div class="admin-info">
+    <img src="/assets/f7f7f7.png">
+    <div>
+      <p>Admin Name</p>
+      <span>Admin</span>
+    </div>
+  </div>
+</mat-toolbar>
+<mat-sidenav-container autosize>
+  <mat-sidenav #sidenav mode="side" [opened]="true" [fixedInViewport]="true">
+    <h1>Olive</h1>
+
+    <mat-nav-list>
+      <mat-list-item><span>Dashboard</span></mat-list-item>
+      <mat-list-item><span>Rules Engine</span></mat-list-item>
+      <mat-list-item><span>Accounts</span></mat-list-item>
+      <mat-list-item><span>Billing</span></mat-list-item>
+      <mat-list-item><span>User Management</span></mat-list-item>
+      <mat-list-item><span>Settings</span></mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet/>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
