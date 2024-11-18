@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {RouterOutlet} from '@angular/router';
+import {Component, inject} from '@angular/core';
+import {Router, RouterOutlet} from '@angular/router';
 import {MatSidenav, MatSidenavContainer, MatSidenavContent} from '@angular/material/sidenav';
 import {MatListItem, MatNavList} from '@angular/material/list';
 import {MatToolbar} from '@angular/material/toolbar';
@@ -12,4 +12,9 @@ import {MatToolbar} from '@angular/material/toolbar';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  private router = inject(Router);
+
+  navigateTo(url: string) {
+    this.router.navigate([url]).then(() => window.location.reload());
+  }
 }

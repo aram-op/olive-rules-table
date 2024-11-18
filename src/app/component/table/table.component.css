@@ -1,8 +1,10 @@
 .table-container {
   -ms-overflow-style: none;
-  height: 560px;
+  height: 630px;
   overflow: auto;
   scrollbar-width: none;
+  border-radius: 8px;
+  min-width: fit-content;
 }
 
 .table-container::-webkit-scrollbar {
@@ -71,17 +73,17 @@ mat-paginator {
   display: flex;
   justify-content: flex-start;
   width: 100%;
+  text-wrap: nowrap;
 }
+
+::ng-deep mat-paginator .mat-mdc-paginator-container {
+  flex-wrap: nowrap;
+}
+
 
 ::ng-deep .mat-mdc-paginator-page-size-select {
   background-color: var(--table-header-color);
   border-radius: 8px;
-}
-
-.rules-search-container {
-  display: flex;
-  justify-content: end;
-  width: 100%;
 }
 
 .rules-search {
@@ -97,8 +99,10 @@ mat-paginator {
   --mdc-outlined-text-field-input-text-placeholder-color: var(--rules-search-color);
   --mdc-outlined-text-field-outline-color: var(--rules-search-color);
   --mdc-outlined-text-field-caret-color: var(--rules-search-color);
-  max-width: 453px;
-  width: 40%;
+  width: 453px;
+  min-width: fit-content;
+  display: flex;
+  justify-self: end;
   margin-bottom: 10px;
 }
 

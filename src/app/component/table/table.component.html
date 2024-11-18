@@ -1,4 +1,4 @@
-<div class="rules-search-container">
+<div class="table-container">
   <mat-form-field appearance="outline" class="rules-search">
     <input matInput type="text" placeholder="Search" [formControl]="searchInput">
     <mat-icon matSuffix>
@@ -7,9 +7,7 @@
     </span>
     </mat-icon>
   </mat-form-field>
-</div>
 
-<div class="table-container">
   <table mat-table [dataSource]="dataSource">
     @for (columnName of displayedColumns; track columnName) {
       <ng-container [matColumnDef]="columnName">

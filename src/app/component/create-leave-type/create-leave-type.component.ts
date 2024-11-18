@@ -111,7 +111,7 @@ export class CreateLeaveTypeComponent implements OnInit {
   }
 
   onCancel() {
-    this.router.navigate([`rules/${this.rule?.id}/leave-types`]);
+    this.router.navigate([`rules/${this.rule?.id}/leave-types`]).then(() => window.location.reload());
   }
 
   setBalanceForm(balanceForm: FormGroup) {

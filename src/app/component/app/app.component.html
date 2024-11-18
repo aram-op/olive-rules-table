@@ -1,6 +1,5 @@
 <mat-toolbar>
   <div class="shape">
-
   </div>
   <div class="admin-info">
     <img src="/assets/f7f7f7.png">
@@ -16,7 +15,7 @@
 
     <mat-nav-list>
       <mat-list-item><span>Dashboard</span></mat-list-item>
-      <mat-list-item><span>Rules Engine</span></mat-list-item>
+      <mat-list-item (click)="navigateTo('/rules')"><span>Rules Engine</span></mat-list-item>
       <mat-list-item><span>Accounts</span></mat-list-item>
       <mat-list-item><span>Billing</span></mat-list-item>
       <mat-list-item><span>User Management</span></mat-list-item>
