@@ -107,7 +107,7 @@ export class CreateLeaveTypeComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.form);
+    //can't implement yet
   }
 
   onCancel() {
