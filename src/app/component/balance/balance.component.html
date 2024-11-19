@@ -1,9 +1,11 @@
-<form [formGroup]="balanceForm">
+<form [formGroup]="form">
   <h2>Balance</h2>
 
   <div class="balance-input-container">
     <label>Balance:</label>
-    <app-balance-combined-input/>
+    <app-balance-combined-input
+      (formValueChanged)="setBalanceForm($event)"
+    />
   </div>
 
   <div class="other-balance-options-container">
@@ -21,12 +23,16 @@
             </mat-select>
           </mat-form-field>
 
-          <app-balance-combined-input/>
+          <app-balance-combined-input
+            (formValueChanged)="setBalanceConditionsForm($event)"
+          />
         </div>
 
         <div class="balance-input-container">
           <label>Balance:</label>
-          <app-balance-combined-input/>
+          <app-balance-combined-input
+            (formValueChanged)="setConditionalBalanceForm($event)"
+          />
         </div>
       </div>
     }
@@ -35,7 +41,10 @@
 
     <div class="extended-balance-container">
       <label>Extended Balance:</label>
-      <app-balance-combined-input [isDisabled$]="isExtendedBalanceDisabled$"/>
+      <app-balance-combined-input
+        [isDisabled$]="isExtendedBalanceDisabled$"
+        (formValueChanged)="setExtendedBalanceForm($event)"
+      />
     </div>
 
     <mat-checkbox formControlName="canBeOverridden">Balance Can Be Overridden</mat-checkbox>

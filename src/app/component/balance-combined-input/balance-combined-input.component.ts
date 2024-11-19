@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatFormField, MatOption, MatSelect, MatSelectTrigger} from '@angular/material/select';
 import {NgClass} from '@angular/common';
@@ -22,6 +22,7 @@ import {BehaviorSubject} from 'rxjs';
   styleUrl: './balance-combined-input.component.css'
 })
 export class BalanceCombinedInputComponent implements OnInit {
+  @Output() formValueChanged: EventEmitter<FormGroup> = new EventEmitter();
   @Input() isDisabled$?: BehaviorSubject<boolean>;
   form = new FormGroup({
     timeOptions: new FormControl('d'),
@@ -29,16 +30,22 @@ export class BalanceCombinedInputComponent implements OnInit {
   });
 
   ngOnInit() {
-    if (!this.isDisabled$) return;
+    this.formValueChanged.emit(this.form);
 
-    this.isDisabled$.subscribe((isDisabled) => {
-      if (isDisabled) {
-        this.form.controls.amount.disable();
-        this.form.controls.timeOptions.disable();
-      } else {
-        this.form.controls.amount.enable();
-        this.form.controls.timeOptions.enable();
-      }
-    })
+    this.form.valueChanges.subscribe(() => {
+      this.formValueChanged.emit(this.form);
+    });
+
+    if (this.isDisabled$) {
+      this.isDisabled$.subscribe((isDisabled) => {
+        if (isDisabled) {
+          this.form.controls.amount.disable();
+          this.form.controls.timeOptions.disable();
+        } else {
+          this.form.controls.amount.enable();
+          this.form.controls.timeOptions.enable();
+        }
+      });
+    }
   }
 }

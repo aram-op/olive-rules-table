@@ -13,7 +13,7 @@ import {
 import {MatIcon} from '@angular/material/icon';
 import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 import {BalanceCombinedInputComponent} from '../balance-combined-input/balance-combined-input.component';
-import {BehaviorSubject, of} from 'rxjs';
+import {BehaviorSubject} from 'rxjs';
 
 @Component({
   selector: 'app-balance',
@@ -42,17 +42,14 @@ export class BalanceComponent implements OnInit {
   @Input({required: true}) isThroughBalance!: boolean;
   @Output() formValueChanged = new EventEmitter();
   isExtendedBalanceDisabled$ = new BehaviorSubject(true);
-  balanceForm = new FormGroup({
-    balance: new FormGroup({}),
+  form = new FormGroup({
+    balanceForm: new FormGroup({}),
     conditional: new FormControl(false),
     balanceCondition: new FormControl('greater'),
-    balanceConditionsNumber: new FormControl(''),
-    balanceConditionsType: new FormControl('year'),
-    conditionalBalanceNumber: new FormControl(''),
-    conditionalBalanceType: new FormControl('day'),
+    balanceConditionsForm: new FormGroup({}),
+    conditionalBalanceForm: new FormGroup({}),
     extendBalance: new FormControl(false),
-    extendedBalanceNumber: new FormControl(''),
-    extendedBalanceType: new FormControl('day'),
+    extendedBalanceForm: new FormGroup({}),
     canBeOverridden: new FormControl(false),
     frequency: new FormControl('yearly'),
     frequencyStart: new FormControl(new Date())
@@ -60,21 +57,31 @@ export class BalanceComponent implements OnInit {
 
 
   ngOnInit() {
-    this.balanceForm.controls.extendedBalanceNumber.disable();
-    this.balanceForm.controls.extendedBalanceType.disable();
+    this.formValueChanged.emit(this.form);
 
-    this.formValueChanged.emit(this.balanceForm);
-
-    this.balanceForm.valueChanges.subscribe((values) => {
+    this.form.valueChanges.subscribe((values) => {
       if (values.extendBalance) {
         this.isExtendedBalanceDisabled$.next(false);
       } else {
         this.isExtendedBalanceDisabled$.next(true);
       }
-      this.formValueChanged.emit(this.balanceForm);
+      this.formValueChanged.emit(this.form);
     });
   }
 
-  protected readonly of = of;
-  protected readonly BehaviorSubject = BehaviorSubject;
+  setBalanceForm(combinedInputForm: FormGroup) {
+    this.form.controls.balanceForm = combinedInputForm;
+  }
+
+  setBalanceConditionsForm(combinedInputForm: FormGroup) {
+    this.form.controls.balanceConditionsForm = combinedInputForm;
+  }
+
+  setConditionalBalanceForm(combinedInputForm: FormGroup) {
+    this.form.controls.conditionalBalanceForm = combinedInputForm;
+  }
+
+  setExtendedBalanceForm(combinedInputForm: FormGroup) {
+    this.form.controls.conditionalBalanceForm = combinedInputForm;
+  }
 }
