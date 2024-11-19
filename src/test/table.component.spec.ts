@@ -109,5 +109,24 @@ describe('TableComponent', () => {
         });
       });
     });
+
+    describe('.onRowSelected()', () => {
+      beforeEach(() => {
+        const rowElem = fixture.debugElement.query(By.css('[mat-row]'));
+
+        jest.spyOn(component, 'onRowSelected');
+        jest.spyOn(component.rowSelected, 'emit');
+
+        rowElem.triggerEventHandler('click');
+      });
+
+      test('if it is called when the user clicks on any row of the table', () => {
+        expect(component.onRowSelected).toHaveBeenCalled();
+      });
+
+      it('should emit the "rowSelected" event', () => {
+        expect(component.rowSelected.emit).toHaveBeenCalled();
+      });
+    });
   });
 });
