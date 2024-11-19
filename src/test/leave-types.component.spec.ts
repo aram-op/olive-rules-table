@@ -1,9 +1,11 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {LeaveTypesComponent} from '../app/component/leave-types/leave-types.component';
-import {ActivatedRoute, provideRouter} from '@angular/router';
+import {ActivatedRoute, provideRouter, Router} from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {of} from 'rxjs';
+import {DebugElement} from '@angular/core';
+import {By} from '@angular/platform-browser';
 
 const expectedLeaveTypes = [{
   'id': '1',
@@ -39,6 +41,7 @@ const expectedLeaveTypes = [{
 describe('LeaveTypesComponent', () => {
   let component: LeaveTypesComponent;
   let fixture: ComponentFixture<LeaveTypesComponent>;
+  let router: Router;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -52,6 +55,8 @@ describe('LeaveTypesComponent', () => {
     fixture = TestBed.createComponent(LeaveTypesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+
+    router = TestBed.inject(Router);
   });
 
   it('should create', () => {
@@ -85,6 +90,27 @@ describe('LeaveTypesComponent', () => {
 
     it('should initialize the columnHeadersToDisplay property', () => {
       expect(component.columnHeadersToDisplay.size).toBeGreaterThan(0);
+    });
+  });
+
+  describe('.onCreateNew', () => {
+    let buttonElem: DebugElement;
+
+    beforeEach(() => {
+      buttonElem = fixture.debugElement.query(By.css('.create-button'));
+
+      jest.spyOn(component, 'onCreateNew');
+      jest.spyOn(router, 'navigate').mockImplementation(() => new Promise(() => {}));
+
+      buttonElem.triggerEventHandler('click');
+    });
+
+    test('if it executes when user clicked on "Create New" button', () => {
+      expect(component.onCreateNew).toHaveBeenCalled();
+    });
+
+    it('should call the .navigate() method of router', () => {
+      expect(router.navigate).toHaveBeenCalled();
     });
   });
 });
