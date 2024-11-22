@@ -10,18 +10,18 @@ h1 {
   font-family: var(--main-font);
   font-size: 26px;
   font-weight: 700;
-  text-wrap: nowrap;
   margin-right: 50px;
+  text-wrap: nowrap;
 }
 
 .create-button {
-  width: 238px;
+  --mdc-filled-button-container-color: var(--secondary-color);
   --mdc-filled-button-container-height: 51px;
   --mdc-filled-button-container-shape: 8px;
-  --mdc-filled-button-container-color: var(--secondary-color);
-  --mdc-filled-button-label-text-weight: 400;
+  --mdc-filled-button-label-text-color: #FFFFFF;
   --mdc-filled-button-label-text-font: var(--main-font);
   --mdc-filled-button-label-text-size: 20px;
-  --mdc-filled-button-label-text-color: #FFFFFF;
+  --mdc-filled-button-label-text-weight: 400;
   --mat-filled-button-ripple-color: transparent;
+  width: 238px;
 }

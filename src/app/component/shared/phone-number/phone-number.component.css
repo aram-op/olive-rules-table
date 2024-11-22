@@ -1,6 +1,6 @@
 .phone-number-input-container {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .phone-number-input-container mat-select {
@@ -10,19 +10,19 @@
 }
 
 .phone-number-input-container input {
-  height: 35px;
-  width: 100%;
-  border: none;
   background: transparent;
+  border: none;
+  color: var(--forms-secondary-color);
   font-family: Nunito Sans;
   font-size: 14px;
   font-weight: 600;
+  height: 35px;
   line-height: 19.1px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   padding-left: 10px;
-  color: var(--forms-secondary-color);
+  text-align: left;
+  text-decoration-skip-ink: none;
+  text-underline-position: from-font;
+  width: 100%;
 }
 
 .phone-number-input-container input:focus {
@@ -30,22 +30,22 @@
 }
 
 span {
+  color: var(--form-field-outline-secondary-color);
   font-size: 25px;
   font-weight: 100;
-  color: var(--form-field-outline-secondary-color);
 }
 
 .phone-number-input-container ::ng-deep.mat-mdc-select-trigger {
   height: 35px;
-  width: 50px;
-  text-align: center;
   line-height: 0px;
   padding: 0;
+  text-align: center;
+  width: 50px;
 }
 
 ::ng-deep.code-select-panel.mat-mdc-select-panel {
-  min-width: 281px;
   background-color: var(--main-background-color);
+  min-width: 281px;
   padding: 0;
 }
 
@@ -55,8 +55,8 @@ span {
 }
 
 mat-form-field {
-  width: 75px;
   --mdc-outlined-text-field-focus-outline-width: 0;
   --mdc-outlined-text-field-outline-width: 0;
   text-align: center;
+  width: 75px;
 }

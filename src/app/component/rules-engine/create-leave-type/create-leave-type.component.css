@@ -3,24 +3,24 @@ form {
 }
 
 h2 {
-  height: 58px;
   font-family: var(--main-font);
   font-size: 24px;
   font-weight: 600;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  text-wrap: nowrap;
-  grid-row: 1;
   grid-column: 1/3;
+  grid-row: 1;
+  height: 58px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+  text-underline-position: from-font;
+  text-wrap: nowrap;
 }
 
 fieldset {
-  border-radius: 8px;
-  border: none;
-  padding: 30px 48px;
   background-color: #ffffff;
+  border: none;
+  border-radius: 8px;
   margin-bottom: 40px;
+  padding: 30px 48px;
 }
 
 .name-fieldset {
@@ -29,104 +29,104 @@ fieldset {
 }
 
 .name-fieldset mat-form-field {
-  width: 100%;
   --mat-form-field-container-height: 44px;
-  --mat-form-field-container-vertical-padding: 10px;
-  --mdc-outlined-text-field-container-shape: 8px;
-  --mdc-outlined-text-field-outline-color: var(--forms-primary-color);
-  --mdc-outlined-text-field-focus-outline-color: var(--table-module-text-field-color);
-  --mdc-outlined-text-field-hover-outline-color: var(--table-module-text-field-color);
-  --mdc-outlined-text-field-focus-outline-width: 1px;
-  --mdc-outlined-text-field-caret-color: var(--table-module-text-field-color);
-  --mdc-outlined-text-field-input-text-color: var(--forms-primary-color);
   --mat-form-field-container-text-size: 14px;
   --mat-form-field-container-text-weight: 500;
+  --mat-form-field-container-vertical-padding: 10px;
+  --mdc-outlined-text-field-caret-color: var(--table-module-text-field-color);
+  --mdc-outlined-text-field-container-shape: 8px;
+  --mdc-outlined-text-field-focus-outline-color: var(--table-module-text-field-color);
+  --mdc-outlined-text-field-focus-outline-width: 1px;
+  --mdc-outlined-text-field-hover-outline-color: var(--table-module-text-field-color);
+  --mdc-outlined-text-field-input-text-color: var(--forms-primary-color);
+  --mdc-outlined-text-field-outline-color: var(--forms-primary-color);
+  width: 100%;
 }
 
 .basic-info-fieldset {
-  font-family: var(--main-font);
-  display: grid;
-  grid-template-columns: calc(100% - 472px) 200px 232px;
-  grid-auto-rows: 66px;
   align-items: center;
+  display: grid;
+  font-family: var(--main-font);
   gap: 0 20px;
+  grid-auto-rows: 66px;
+  grid-template-columns: calc(100% - 472px) 200px 232px;
 }
 
 ::ng-deep.basic-info-fieldset mat-form-field {
-  height: 44px;
-  width: 232px;
-  --mdc-outlined-text-field-container-shape: 8px;
-  --mat-form-field-container-vertical-padding: 10px;
   --mat-form-field-container-height: 44px;
-  --mdc-outlined-text-field-outline-color: var(--forms-teritary-color);
-  --mdc-outlined-text-field-focus-outline-color: var(--table-module-text-field-color);
-  --mdc-outlined-text-field-hover-outline-color: var(--table-module-text-field-color);
-  --mdc-outlined-text-field-focus-outline-width: 1px;
-  --mdc-outlined-text-field-caret-color: var(--table-module-text-field-color);
-  --mdc-outlined-text-field-input-text-color: var(--forms-primary-color);
+  --mat-form-field-container-vertical-padding: 10px;
   --mat-form-field-enabled-select-arrow-color: var(--forms-primary-color);
   --mat-form-field-focus-select-arrow-color: var(--forms-primary-color);
+  height: 44px;
+  --mdc-outlined-text-field-caret-color: var(--table-module-text-field-color);
+  --mdc-outlined-text-field-container-shape: 8px;
+  --mdc-outlined-text-field-focus-outline-color: var(--table-module-text-field-color);
+  --mdc-outlined-text-field-focus-outline-width: 1px;
+  --mdc-outlined-text-field-hover-outline-color: var(--table-module-text-field-color);
+  --mdc-outlined-text-field-input-text-color: var(--forms-primary-color);
+  --mdc-outlined-text-field-outline-color: var(--forms-teritary-color);
   --mat-select-enabled-arrow-color: #1D1B20;
   --mat-select-focused-arrow-color: #1D1B20;
   --mat-select-trigger-text-size: 14px;
   --mat-select-trigger-text-weight: 500;
+  width: 232px;
 }
 
 mat-radio-group {
-  grid-column: 1;
-  display: grid;
   align-items: center;
+  display: grid;
+  grid-column: 1;
   grid-template-columns: 160px 190px auto;
 }
 
 mat-label {
+  color: #000000;
   font-size: 18px;
   font-weight: 400;
-  text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #000000;
+  text-underline-position: from-font;
 }
 
 mat-radio-button {
-  text-wrap: nowrap;
+  --mat-radio-checked-ripple-color: transparent;
   --mat-radio-label-text-color: var(--forms-primary-color);
   --mat-radio-label-text-font: var(--main-font);
-  --mat-radio-checked-ripple-color: transparent;
-  --mat-radio-label-text-weight: 400;
-  --mat-radio-label-text-size: 14px;
   --mat-radio-label-text-line-height: 19px;
+  --mat-radio-label-text-size: 14px;
+  --mat-radio-label-text-weight: 400;
   --mat-radio-ripple-color: var(--forms-primary-color);
   --mdc-radio-selected-focus-icon-color: var(--forms-primary-color);
   --mdc-radio-selected-hover-icon-color: var(--forms-primary-color);
   --mdc-radio-selected-icon-color: var(--forms-primary-color);
   --mdc-radio-selected-pressed-icon-color: var(--forms-primary-color);
-  --mdc-radio-unselected-icon-color: var(--forms-primary-color);
-  --mdc-radio-unselected-hover-icon-color: var(--forms-primary-color);
   --mdc-radio-unselected-focus-icon-color: var(--forms-primary-color);
+  --mdc-radio-unselected-hover-icon-color: var(--forms-primary-color);
+  --mdc-radio-unselected-icon-color: var(--forms-primary-color);
+  text-wrap: nowrap;
 }
 
 .entitled-radio-group mat-radio-button {
-  --mat-radio-label-text-color: #000000;
   --mat-radio-checked-ripple-color: transparent;
-  --mat-radio-label-text-weight: 400;
+  --mat-radio-label-text-color: #000000;
   --mat-radio-label-text-size: 14px;
+  --mat-radio-label-text-weight: 400;
   --mat-radio-ripple-color: #000000;
   --mdc-radio-selected-focus-icon-color: #000000;
   --mdc-radio-selected-hover-icon-color: #000000;
   --mdc-radio-selected-icon-color: #000000;
   --mdc-radio-selected-pressed-icon-color: #000000;
-  --mdc-radio-unselected-icon-color: #000000;
-  --mdc-radio-unselected-hover-icon-color: #000000;
   --mdc-radio-unselected-focus-icon-color: #000000;
+  --mdc-radio-unselected-hover-icon-color: #000000;
+  --mdc-radio-unselected-icon-color: #000000;
 }
 
 .date-range-container {
   display: flex;
+  grid-column: 1;
   height: 35px;
-  width: 300px;
   justify-content: space-between;
   margin-left: 170px;
-  grid-column: 1;
+  width: 300px;
 }
 
 ::ng-deep .material-symbols-rounded {
@@ -137,16 +137,16 @@ mat-radio-button {
 }
 
 .datepicker {
-  --mat-form-field-container-vertical-padding: 6px;
   --mat-form-field-container-height: 35px;
+  --mat-form-field-container-vertical-padding: 6px;
+  --mat-icon-color: var(--secondary-color);
   --mdc-outlined-text-field-container-shape: 8px;
-  --mdc-outlined-text-field-outline-width: 0.5px;
-  --mdc-outlined-text-field-outline-color: var(--form-field-outline-secondary-color);
-  --mdc-outlined-text-field-focus-outline-width: 1px;
   --mdc-outlined-text-field-focus-outline-color: var(--form-field-outline-secondary-color);
+  --mdc-outlined-text-field-focus-outline-width: 1px;
   --mdc-outlined-text-field-hover-outline-color: var(--form-field-outline-secondary-color);
   --mdc-outlined-text-field-input-text-color: var(--form-field-outline-secondary-color);
-  --mat-icon-color: var(--secondary-color);
+  --mdc-outlined-text-field-outline-color: var(--form-field-outline-secondary-color);
+  --mdc-outlined-text-field-outline-width: 0.5px;
   width: 140px;
 }
 
@@ -169,26 +169,26 @@ mat-radio-button {
 }
 
 .button-container {
-  width: 534px;
   display: flex;
   justify-content: space-between;
+  width: 534px;
 }
 
 button {
-  font-family: var(--main-font);
   border-radius: 8px;
+  font-family: var(--main-font);
 }
 
 .cancel-button {
-  width: 90px;
-  --mdc-text-button-label-text-color: var(--secondary-color);
   --mdc-text-button-container-height: 51px;
-  --mat-text-button-ripple-color: rgba(194, 193, 193, 0.2);
-  --mat-text-button-hover-state-layer-opacity: 0;
-  --mat-text-button-pressed-state-layer-opacity: 0;
   --mat-text-button-focus-state-layer-opacity: 0;
+  --mat-text-button-hover-state-layer-opacity: 0;
+  --mdc-text-button-label-text-color: var(--secondary-color);
   --mdc-text-button-label-text-size: 20px;
   --mdc-text-button-label-text-weight: 400;
+  --mat-text-button-pressed-state-layer-opacity: 0;
+  --mat-text-button-ripple-color: rgba(194, 193, 193, 0.2);
+  width: 90px;
 }
 
 .cancel-button:hover, .cancel-button:focus {
@@ -196,17 +196,17 @@ button {
 }
 
 .save-button {
-  width: 212px;
+  color: var(--button-secondary-color);
   height: 51px;
-  --mdc-outlined-button-outline-color: var(--button-secondary-color);
-  --mdc-outlined-button-label-text-color: var(--button-secondary-color);
-  --mat-outlined-button-hover-state-layer-opacity: 0;
-  --mat-outlined-button-pressed-state-layer-opacity: 0;
   --mat-outlined-button-focus-state-layer-opacity: 0;
-  --mat-outlined-button-ripple-color: rgba(194, 193, 193, 0.2);
+  --mat-outlined-button-hover-state-layer-opacity: 0;
+  --mdc-outlined-button-label-text-color: var(--button-secondary-color);
   --mdc-outlined-button-label-text-size: 20px;
   --mdc-outlined-button-label-text-weight: 400;
-  color: var(--button-secondary-color);
+  --mdc-outlined-button-outline-color: var(--button-secondary-color);
+  --mat-outlined-button-pressed-state-layer-opacity: 0;
+  --mat-outlined-button-ripple-color: rgba(194, 193, 193, 0.2);
+  width: 212px;
 }
 
 .save-button:hover, .save-button:focus {
@@ -214,9 +214,9 @@ button {
 }
 
 .create-button {
-  width: 212px;
-  height: 51px;
   --mdc-filled-button-container-color: var(--secondary-color);
   --mdc-filled-button-label-text-size: 20px;
   --mdc-filled-button-label-text-weight: 400;
+  height: 51px;
+  width: 212px;
 }

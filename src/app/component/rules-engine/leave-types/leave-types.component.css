@@ -7,20 +7,20 @@
 
 .create-button {
   background-color: var(--secondary-color);
-  color: #ffffff;
-  height: 51px;
-  width: 232px;
-  font-family: var(--main-font);
   box-shadow: none;
-  font-weight: 600;
-  font-size: 20px;
-  --mat-fab-ripple-color: transparent;
+  color: #ffffff;
   --mdc-extended-fab-container-shape: 8px;
   --mdc-extended-fab-focus-container-elevation-shadow: 0;
   --mdc-extended-fab-hover-container-elevation-shadow: 0;
   --mdc-extended-fab-pressed-container-elevation-shadow: 0;
-  --mat-fab-state-layer-color: #e0e0e0;
   --mat-fab-pressed-state-layer-opacity: 0.2;
+  --mat-fab-ripple-color: transparent;
+  --mat-fab-state-layer-color: #e0e0e0;
+  font-family: var(--main-font);
+  font-size: 20px;
+  font-weight: 600;
+  height: 51px;
+  width: 232px;
 }
 
 :host ::ng-deep .actions-icon {

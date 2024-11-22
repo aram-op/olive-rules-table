@@ -6,45 +6,45 @@ form h2 {
   font-family: var(--main-font);
   font-size: 24px;
   font-weight: 600;
-  line-height: 32.74px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  margin-bottom: 33px;
   height: 33px;
+  line-height: 32.74px;
+  margin-bottom: 33px;
+  text-align: left;
+  text-decoration-skip-ink: none;
+  text-underline-position: from-font;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: minmax(min-content, 50%) minmax(min-content, 50%);
   gap: 0 50px;
+  grid-template-columns: minmax(min-content, 50%) minmax(min-content, 50%);
   grid-template-rows: 65px 65px 65px 65px 146px;
   margin-bottom: 30px;
 }
 
 .input-container {
-  width: 442px;
-  height: 35px;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  display: flex;
+  height: 35px;
+  justify-content: space-between;
+  width: 442px;
 }
 
 mat-form-field {
-  --mdc-outlined-text-field-container-shape: 8px;
   --mat-form-field-container-height: 35px;
-  --mat-form-field-container-vertical-padding: 10px;
-  --mdc-outlined-text-field-outline-color: var(--form-field-outline-secondary-color);
-  --mdc-outlined-text-field-outline-width: 0.5px;
-  --mdc-outlined-text-field-input-text-color: var(--forms-secondary-color);
+  --mat-form-field-container-text-font: var(--main-font);
+  --mat-form-field-container-text-line-height: 19px;
   --mat-form-field-container-text-size: 14px;
   --mat-form-field-container-text-weight: 600;
-  --mat-form-field-container-text-line-height: 19px;
-  --mat-form-field-container-text-font: var(--main-font);
-  --mdc-outlined-text-field-input-text-placeholder-color: var(--form-field-outline-secondary-color);
+  --mat-form-field-container-vertical-padding: 10px;
   --mdc-outlined-text-field-caret-color: var(--forms-secondary-color);
-  --mdc-outlined-text-field-focus-outline-width: 1px;
+  --mdc-outlined-text-field-container-shape: 8px;
   --mdc-outlined-text-field-focus-outline-color: var(--forms-secondary-color);
+  --mdc-outlined-text-field-focus-outline-width: 1px;
+  --mdc-outlined-text-field-input-text-color: var(--forms-secondary-color);
+  --mdc-outlined-text-field-input-text-placeholder-color: var(--form-field-outline-secondary-color);
+  --mdc-outlined-text-field-outline-color: var(--form-field-outline-secondary-color);
+  --mdc-outlined-text-field-outline-width: 0.5px;
 }
 
 .input-container mat-form-field {
@@ -57,8 +57,8 @@ mat-label {
   font-weight: 400;
   line-height: 24.55px;
   text-align: left;
-  text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  text-underline-position: from-font;
 }
 
 .input-container .upload-button-container {
@@ -66,33 +66,33 @@ mat-label {
 }
 
 .input-container button {
-  width: 165px;
+  --mdc-outlined-button-container-height: 35px;
+  --mdc-outlined-button-container-shape: 8px;
   --mdc-outlined-button-label-text-color: var(--secondary-color);
+  --mdc-outlined-button-label-text-font: var(--main-font);
   --mdc-outlined-button-label-text-size: 20px;
   --mdc-outlined-button-label-text-weight: 600;
-  --mdc-outlined-button-label-text-font: var(--main-font);
-  --mdc-outlined-button-container-shape: 8px;
-  --mdc-outlined-button-container-height: 35px;
   --mdc-outlined-button-outline-color: var(--secondary-color);
   --mdc-outlined-button-outline-width: 1px;
-  --mat-outlined-button-state-layer-color: grey;
   --mat-outlined-button-ripple-color: transparent;
+  --mat-outlined-button-state-layer-color: grey;
+  width: 165px;
 }
 
 .input-container .country-selector {
+  --mdc-filled-text-field-active-indicator-color: var(--secondary-color);
+  --mdc-filled-text-field-active-indicator-height: 1px;
   --mdc-filled-text-field-container-color: transparent;
   --mdc-filled-text-field-container-shape: 8px;
-  --mat-form-field-container-height: 35px;
-  --mat-form-field-container-vertical-padding: 7px;
-  --mdc-filled-text-field-active-indicator-height: 1px;
-  --mdc-filled-text-field-active-indicator-color: var(--secondary-color);
   --mdc-filled-text-field-focus-active-indicator-color: var(--secondary-color);
   --mdc-filled-text-field-hover-active-indicator-color: var(--secondary-color);
-  --mat-select-focused-arrow-color: var(--secondary-color);
+  --mat-form-field-container-height: 35px;
+  --mat-form-field-container-vertical-padding: 7px;
   --mat-select-enabled-arrow-color: var(--secondary-color);
   --mat-select-enabled-trigger-text-color: var(--secondary-color);
-  --mat-select-trigger-text-weight: 400;
+  --mat-select-focused-arrow-color: var(--secondary-color);
   --mat-select-trigger-text-font: var(--main-font);
+  --mat-select-trigger-text-weight: 400;
 }
 
 ::ng-deep.select-panel.mat-mdc-select-panel {
@@ -106,9 +106,9 @@ mat-label {
 }
 
 ::ng-deep .mat-mdc-select-arrow {
-  width: 0;
   height: 0;
   opacity: 0;
+  width: 0;
 }
 
 .select-container mat-form-field mat-icon {
@@ -121,11 +121,11 @@ mat-label {
 }
 
 .description-container {
-  height: 106px;
-  display: flex;
   align-content: start;
+  display: flex;
   grid-column: 1/span 2;
   grid-row: 5;
+  height: 106px;
 }
 
 .description-container mat-form-field {
@@ -134,20 +134,20 @@ mat-label {
 }
 
 .description-container mat-form-field textarea {
-  resize: none;
   height: 86px;
+  resize: none;
 }
 
 .create-button {
-  width: 159px;
+  --mdc-filled-button-container-color: var(--secondary-color);
   --mdc-filled-button-container-height: 51px;
   --mdc-filled-button-container-shape: 8px;
-  --mdc-filled-button-container-color: var(--secondary-color);
-  --mdc-filled-button-label-text-weight: 400;
+  --mdc-filled-button-label-text-color: #FFFFFF;
   --mdc-filled-button-label-text-font: var(--main-font);
   --mdc-filled-button-label-text-size: 20px;
-  --mdc-filled-button-label-text-color: #FFFFFF;
+  --mdc-filled-button-label-text-weight: 400;
   --mat-filled-button-ripple-color: transparent;
+  width: 159px;
 }
 
 .phone-number-field {

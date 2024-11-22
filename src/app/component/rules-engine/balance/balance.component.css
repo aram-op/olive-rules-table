@@ -1,10 +1,10 @@
 form {
   background-color: #ffffff;
   border-radius: 8px;
-  padding: 30px 48px;
-  min-width: fit-content;
   height: fit-content;
   margin-bottom: 40px;
+  min-width: fit-content;
+  padding: 30px 48px;
 }
 
 h2 {
@@ -14,11 +14,11 @@ h2 {
 }
 
 .balance-input-container {
-  width: 302px;
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: space-between;
   margin: 20px 0;
+  width: 302px;
 }
 
 .balance-input-container label {
@@ -28,17 +28,17 @@ h2 {
 }
 
 .balance-dropdown {
-  height: 44px;
-  border: 0.5px solid black;
-  border-radius: 0 8px 8px 0;
-  border-left: none;
   background-color: transparent;
+  border: 0.5px solid black;
+  border-left: none;
+  border-radius: 0 8px 8px 0;
   color: #000000;
   font-family: var(--main-font);
   font-size: 14px;
-  width: 63px;
   font-weight: 600;
+  height: 44px;
   padding-left: 15px;
+  width: 63px;
 }
 
 .other-balance-options-container {
@@ -59,41 +59,41 @@ mat-checkbox {
 }
 
 .balance-conditions-container {
-  width: 100%;
-  min-width: fit-content;
-  text-wrap: nowrap;
-  height: 87px;
+  align-items: center;
+  background-color: var(--teritary-color);
   border-radius: 8px;
   display: flex;
-  align-items: center;
-  padding-left: 40px;
-  background-color: var(--teritary-color);
+  height: 87px;
   margin-bottom: 20px;
+  min-width: fit-content;
+  padding-left: 40px;
+  text-wrap: nowrap;
+  width: 100%;
 }
 
 .balance-conditions-container label {
+  color: var(--forms-secondary-color);
   font-family: var(--main-font);
   font-size: 18px;
   font-weight: 400;
-  color: var(--forms-secondary-color);
 }
 
 .balance-conditions-container mat-form-field {
-  margin-left: 25px;
-  width: 232px;
-  --mat-form-field-container-vertical-padding: 10px;
   --mat-form-field-container-height: 44px;
-  --mdc-outlined-text-field-container-shape: 8px;
-  --mdc-outlined-text-field-outline-color: var(--forms-secondary-color);
-  --mat-select-trigger-text-font: var(--main-font);
-  --mat-select-trigger-text-size: 14px;
-  --mat-select-enabled-trigger-text-color: var(--forms-secondary-color);
-  --mat-select-trigger-text-weight: 600;
+  --mat-form-field-container-vertical-padding: 10px;
   --mat-form-field-enabled-select-arrow-color: var(--forms-secondary-color);
-  --mat-select-focused-arrow-color: var(--forms-secondary-color);
+  margin-left: 25px;
+  --mdc-outlined-text-field-container-shape: 8px;
   --mdc-outlined-text-field-focus-outline-color: var(--forms-secondary-color);
   --mdc-outlined-text-field-focus-outline-width: 1px;
+  --mdc-outlined-text-field-outline-color: var(--forms-secondary-color);
   --mdc-outlined-text-field-outline-width: 0.5px;
+  --mat-select-enabled-trigger-text-color: var(--forms-secondary-color);
+  --mat-select-focused-arrow-color: var(--forms-secondary-color);
+  --mat-select-trigger-text-font: var(--main-font);
+  --mat-select-trigger-text-size: 14px;
+  --mat-select-trigger-text-weight: 600;
+  width: 232px;
 }
 
 .select-panel.mat-mdc-select-panel {
@@ -101,8 +101,8 @@ mat-checkbox {
 }
 
 .balance-conditions {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .balance-conditions app-balance-combined-input {
@@ -114,8 +114,8 @@ mat-checkbox {
 }
 
 .balance-conditions-container .balance-input-container {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: flex-start;
 }
 
@@ -124,23 +124,23 @@ mat-checkbox {
 }
 
 .extended-balance-container {
-  width: 100%;
-  min-width: fit-content;
-  text-wrap: nowrap;
-  height: 87px;
+  align-items: center;
+  background-color: var(--teritary-color);
   border-radius: 8px;
   display: flex;
-  align-items: center;
-  padding-left: 40px;
-  background-color: var(--teritary-color);
+  height: 87px;
   margin-bottom: 20px;
+  min-width: fit-content;
+  padding-left: 40px;
+  text-wrap: nowrap;
+  width: 100%;
 }
 
 .extended-balance-container label {
+  color: var(--forms-secondary-color);
   font-family: var(--main-font);
   font-size: 18px;
   font-weight: 400;
-  color: var(--forms-secondary-color);
 }
 
 .extended-balance-container app-balance-combined-input {
@@ -148,11 +148,11 @@ mat-checkbox {
 }
 
 .frequency-container {
-  margin-top: 50px;
-  height: 48px;
-  width: 832px;
   display: flex;
+  height: 48px;
   justify-content: space-between;
+  margin-top: 50px;
+  width: 832px;
 }
 
 .frequency-container label {
@@ -162,21 +162,21 @@ mat-checkbox {
 }
 
 .frequency-container mat-form-field {
-  margin-left: 30px;
-  width: 232px;
-  --mat-form-field-container-vertical-padding: 10px;
   --mat-form-field-container-height: 44px;
-  --mdc-outlined-text-field-container-shape: 8px;
-  --mdc-outlined-text-field-outline-color: #000000;
-  --mat-select-trigger-text-font: Roboto;
-  --mat-select-trigger-text-size: 14px;
-  --mat-select-enabled-trigger-text-color: #000000;
-  --mat-select-trigger-text-weight: 500;
+  --mat-form-field-container-vertical-padding: 10px;
   --mat-form-field-enabled-select-arrow-color: #000000;
-  --mat-select-focused-arrow-color: #000000;
+  margin-left: 30px;
+  --mdc-outlined-text-field-container-shape: 8px;
   --mdc-outlined-text-field-focus-outline-color: #000000;
   --mdc-outlined-text-field-focus-outline-width: 1px;
+  --mdc-outlined-text-field-outline-color: #000000;
   --mdc-outlined-text-field-outline-width: 0.5px;
+  --mat-select-enabled-trigger-text-color: #000000;
+  --mat-select-focused-arrow-color: #000000;
+  --mat-select-trigger-text-font: Roboto;
+  --mat-select-trigger-text-size: 14px;
+  --mat-select-trigger-text-weight: 500;
+  width: 232px;
 }
 
 .frequency-date-container mat-form-field {
@@ -185,9 +185,9 @@ mat-checkbox {
 }
 
 .frequency-date-container mat-icon {
-  --mat-icon-color: #000000;
   font-variation-settings: 'FILL' 1,
   'wght' 400,
   'GRAD' 0,
-  'opsz' 20
+  'opsz' 20;
+  --mat-icon-color: #000000;
 }

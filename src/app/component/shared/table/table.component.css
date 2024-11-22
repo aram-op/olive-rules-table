@@ -1,10 +1,10 @@
 .table-container {
-  -ms-overflow-style: none;
-  max-height: 630px;
-  overflow: auto;
-  scrollbar-width: none;
   border-radius: 8px;
+  max-height: 630px;
   min-width: fit-content;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 table {
@@ -58,6 +58,12 @@ td {
 }
 
 mat-paginator {
+  display: flex;
+  justify-content: flex-start;
+  --mdc-outlined-text-field-container-shape: 8px;
+  --mdc-outlined-text-field-focus-outline-color: var(--primary-color);
+  --mdc-outlined-text-field-hover-outline-color: var(--primary-color);
+  --mdc-outlined-text-field-outline-color: var(--primary-color);
   --mat-paginator-container-background-color: transparent;
   --mat-paginator-container-text-color: var(--paginator-text-color);
   --mat-paginator-container-text-font: var(--paginator-font);
@@ -70,14 +76,8 @@ mat-paginator {
   --mat-select-enabled-trigger-text-color: #191919;
   --mat-select-focused-arrow-color: transparent;
   --mat-select-trigger-text-font: var(--main-font);
-  --mdc-outlined-text-field-container-shape: 8px;
-  --mdc-outlined-text-field-focus-outline-color: var(--primary-color);
-  --mdc-outlined-text-field-hover-outline-color: var(--primary-color);
-  --mdc-outlined-text-field-outline-color: var(--primary-color);
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
   text-wrap: nowrap;
+  width: 100%;
 }
 
 ::ng-deep mat-paginator .mat-mdc-paginator-container {
@@ -91,10 +91,15 @@ mat-paginator {
 }
 
 .rules-search {
+  display: flex;
   --mat-form-field-container-height: 51px;
   --mat-form-field-container-text-font: var(--main-font);
   --mat-form-field-container-text-weight: 600;
   --mat-icon-color: var(--secondary-color);
+  justify-self: end;
+  margin-bottom: 10px;
+  min-width: fit-content;
+  --mdc-outlined-text-field-caret-color: var(--secondary-color);
   --mdc-outlined-text-field-container-shape: 8px;
   --mdc-outlined-text-field-focus-outline-color: var(--secondary-color);
   --mdc-outlined-text-field-focus-outline-width: 2px;
@@ -102,12 +107,7 @@ mat-paginator {
   --mdc-outlined-text-field-input-text-color: var(--secondary-color);
   --mdc-outlined-text-field-input-text-placeholder-color: var(--secondary-color);
   --mdc-outlined-text-field-outline-color: var(--secondary-color);
-  --mdc-outlined-text-field-caret-color: var(--secondary-color);
   width: 453px;
-  min-width: fit-content;
-  display: flex;
-  justify-self: end;
-  margin-bottom: 10px;
 }
 
 .mat-mdc-row:hover {
@@ -115,8 +115,8 @@ mat-paginator {
 }
 
 .mat-column-actions {
-  width: 12%;
   text-align: end;
+  width: 12%;
 }
 
 .mat-mdc-header-cell.mat-column-actions {

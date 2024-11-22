@@ -1,10 +1,10 @@
 form {
-  height: 330px;
-  min-width: fit-content;
-  border-radius: 8px;
   background-color: #ffffff;
-  padding: 30px 48px;
+  border-radius: 8px;
+  height: 330px;
   margin-bottom: 40px;
+  min-width: fit-content;
+  padding: 30px 48px;
 }
 
 h2 {
@@ -13,23 +13,23 @@ h2 {
   font-weight: 600;
   line-height: 32.74px;
   text-align: left;
-  text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  text-underline-position: from-font;
 }
 
 fieldset {
+  border: none;
   display: flex;
   flex-direction: column;
-  border: none;
 }
 
 mat-radio-group {
-  height: 48px;
+  align-items: center;
   display: flex;
   flex-wrap: nowrap;
-  text-wrap: nowrap;
-  align-items: center;
+  height: 48px;
   margin-top: 30px;
+  text-wrap: nowrap;
 }
 
 .frequency-container {
@@ -37,48 +37,48 @@ mat-radio-group {
 }
 
 mat-form-field {
-  width: 232px;
-  --mat-form-field-container-vertical-padding: 10px;
   --mat-form-field-container-height: 44px;
-  --mdc-outlined-text-field-container-shape: 8px;
-  --mdc-outlined-text-field-outline-color: var(--forms-secondary-color);
   --mat-form-field-container-text-font: Roboto;
-  --mdc-outlined-text-field-input-text-color: var(--forms-primary-color);
-  --mdc-outlined-text-field-focus-outline-color: var(--forms-secondary-color);
-  --mdc-outlined-text-field-hover-outline-color: var(--forms-secondary-color);
-  --mdc-outlined-text-field-focus-outline-width: 2px;
-  --mdc-outlined-text-field-outline-width: 1px;
+  --mat-form-field-container-vertical-padding: 10px;
   --mdc-outlined-text-field-caret-color: var(--forms-secondary-color);
+  --mdc-outlined-text-field-container-shape: 8px;
+  --mdc-outlined-text-field-focus-outline-color: var(--forms-secondary-color);
+  --mdc-outlined-text-field-focus-outline-width: 2px;
+  --mdc-outlined-text-field-hover-outline-color: var(--forms-secondary-color);
+  --mdc-outlined-text-field-input-text-color: var(--forms-primary-color);
+  --mdc-outlined-text-field-outline-color: var(--forms-secondary-color);
+  --mdc-outlined-text-field-outline-width: 1px;
+  width: 232px;
 }
 
 .unused-balance-radio-container {
   align-content: center;
   display: flex;
-  width: 450px;
   justify-content: space-between;
+  width: 450px;
 }
 
 mat-label {
-  margin-right: 20px;
   font-family: var(--main-font);
   font-size: 18px;
   font-weight: 400;
+  margin-right: 20px;
 }
 
 mat-radio-button {
+  --mat-radio-checked-ripple-color: transparent;
   --mat-radio-label-text-color: var(--forms-secondary-color);
-  --mat-radio-label-text-size: 16px;
   --mat-radio-label-text-font: var(--main-font);
+  --mat-radio-label-text-size: 16px;
   --mat-radio-label-text-weight: 400;
   --mat-radio-ripple-color: var(--forms-primary-color);
   --mdc-radio-selected-focus-icon-color: var(--forms-primary-color);
   --mdc-radio-selected-hover-icon-color: var(--forms-primary-color);
   --mdc-radio-selected-icon-color: var(--forms-primary-color);
   --mdc-radio-selected-pressed-icon-color: var(--forms-primary-color);
-  --mdc-radio-unselected-icon-color: var(--forms-primary-color);
-  --mdc-radio-unselected-hover-icon-color: var(--forms-primary-color);
   --mdc-radio-unselected-focus-icon-color: var(--forms-primary-color);
-  --mat-radio-checked-ripple-color: transparent;
+  --mdc-radio-unselected-hover-icon-color: var(--forms-primary-color);
+  --mdc-radio-unselected-icon-color: var(--forms-primary-color);
 }
 
 .unused-balance-radio-container mat-radio-button {
@@ -86,6 +86,6 @@ mat-radio-button {
 }
 
 .consumption-type {
-  width: 303px;
   justify-content: space-between;
+  width: 303px;
 }

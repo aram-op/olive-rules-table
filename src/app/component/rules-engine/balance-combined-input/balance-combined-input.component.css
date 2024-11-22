@@ -1,19 +1,19 @@
 .input-field {
   border: 0.5px solid var(--forms-secondary-color);
   border-radius: 8px 0 0 8px;
-  --mdc-outlined-text-field-outline-width: 0;
-  --mat-form-field-container-vertical-padding: 11px;
   --mat-form-field-container-height: 44px;
-  --mdc-outlined-text-field-focus-outline-width: 0;
-  --mdc-outlined-text-field-caret-color: var(--forms-secondary-color);
-  --mdc-outlined-text-field-disabled-outline-color: transparent;
   --mat-form-field-container-text-font: var(--main-font);
   --mat-form-field-container-text-size: 14px;
+  --mat-form-field-container-vertical-padding: 11px;
+  --mat-form-field-enabled-select-arrow-color: var(--forms-secondary-color);
+  height: 44px;
+  --mdc-outlined-text-field-caret-color: var(--forms-secondary-color);
+  --mdc-outlined-text-field-disabled-outline-color: transparent;
+  --mdc-outlined-text-field-focus-outline-width: 0;
   --mdc-outlined-text-field-input-text-color: var(--forms-secondary-color);
   --mdc-outlined-text-field-input-text-placeholder-color: var(--forms-secondary-color);
-  --mat-form-field-enabled-select-arrow-color: var(--forms-secondary-color);
+  --mdc-outlined-text-field-outline-width: 0;
   width: 91px;
-  height: 44px;
 }
 
 .input-field:has(input:disabled) {
@@ -25,30 +25,30 @@
 }
 
 .select-field {
-  --mdc-outlined-text-field-outline-width: 0;
   border: 0.5px solid var(--forms-secondary-color);
   border-left: none;
   border-radius: 0 8px 8px 0;
   --mat-form-field-container-height: 44px;
   --mat-form-field-container-vertical-padding: 10px;
-  --mdc-outlined-text-field-focus-outline-width: 0;
-  --mat-select-enabled-arrow-color: var(--forms-secondary-color);
-  --mat-select-focused-arrow-color: var(--forms-secondary-color);
+  --mat-form-field-enabled-select-arrow-color: var(--forms-secondary-color);
+  height: 44px;
   --mdc-outlined-text-field-disabled-outline-color: transparent;
+  --mdc-outlined-text-field-focus-outline-width: 0;
+  --mdc-outlined-text-field-outline-width: 0;
+  --mat-select-enabled-arrow-color: var(--forms-secondary-color);
+  --mat-select-enabled-trigger-text-color: var(--forms-secondary-color);
+  --mat-select-focused-arrow-color: var(--forms-secondary-color);
+  --mat-select-focused-arrow-color: var(--forms-secondary-color);
   --mat-select-trigger-text-font: var(--main-font);
   --mat-select-trigger-text-size: 14px;
-  --mat-select-enabled-trigger-text-color: var(--forms-secondary-color);
   --mat-select-trigger-text-weight: 600;
-  --mat-form-field-enabled-select-arrow-color: var(--forms-secondary-color);
-  --mat-select-focused-arrow-color: var(--forms-secondary-color);
   width: 63px;
-  height: 44px;
 }
 
 ::ng-deep.combined-input-select-panel.mat-mdc-select-panel {
-  min-width: 112px;
-  border-radius: 4px;
   background: #ffffff;
-  position: relative;
+  border-radius: 4px;
   left: -50px;
+  min-width: 112px;
+  position: relative;
 }
