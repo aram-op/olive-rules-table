@@ -12,6 +12,7 @@ describe('CreateLeaveTypeComponent', () => {
   let component: CreateLeaveTypeComponent;
   let fixture: ComponentFixture<CreateLeaveTypeComponent>;
   let router: Router;
+  const mockRoute = {params: of({ruleId: '1'})};
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -19,7 +20,7 @@ describe('CreateLeaveTypeComponent', () => {
       providers: [
         provideNativeDateAdapter(),
         provideRouter([]),
-        {provide: ActivatedRoute, useValue: {params: of({ruleId: '1'})}}
+        {provide: ActivatedRoute, useValue: mockRoute}
       ]
 
     }).compileComponents();
@@ -153,7 +154,7 @@ describe('CreateLeaveTypeComponent', () => {
     });
 
     it('should call the .navigate() of Router', () => {
-      expect(router.navigate).toHaveBeenCalledWith([`rules/1/leave-types`]);
+      expect(router.navigate).toHaveBeenCalledWith(['../'], {relativeTo: mockRoute});
     });
   });
 });

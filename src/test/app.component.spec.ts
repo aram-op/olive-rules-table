@@ -11,6 +11,7 @@ import {
   MatSidenavHarness
 } from '@angular/material/sidenav/testing';
 import {DebugElement} from '@angular/core';
+import {provideRouter} from '@angular/router';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -20,6 +21,7 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent, NoopAnimationsModule],
+      providers: [provideRouter([])]
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);

@@ -1,21 +1,25 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {RulesComponent} from '../../app/component/rules-engine/rules/rules.component';
-import {provideRouter, Router} from '@angular/router';
+import {ActivatedRoute, provideRouter, Router} from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import RULES from '../../rules.json';
 import {By} from '@angular/platform-browser';
 import spyOn = jest.spyOn;
+import {of} from 'rxjs';
 
 describe('RulesComponent', () => {
   let component: RulesComponent;
   let fixture: ComponentFixture<RulesComponent>;
   let router: Router;
 
+  const mockRoute = {params: of({ruleId: '1'})};
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RulesComponent, BrowserAnimationsModule],
       providers: [
         provideRouter([]),
+        {provide: ActivatedRoute, useValue: mockRoute}
       ]
 
     }).compileComponents();
@@ -65,7 +69,7 @@ describe('RulesComponent', () => {
 
       component.navigateToLeavesPage({id: 1, model: {module: 'Leaves'}});
 
-      expect(router.navigate).toHaveBeenCalledWith(['rules/1/leave-types']);
+      expect(router.navigate).toHaveBeenCalledWith(['1/leave-types'], {relativeTo: mockRoute});
     });
   });
 });
