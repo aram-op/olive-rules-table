@@ -1,0 +1,17 @@
+<div class="heading-container">
+  <app-heading [headings]="headings"/>
+  <button mat-fab extended class="create-button" (click)="onCreateNew()">
+    <mat-icon>
+      <span class="material-symbols-rounded">
+        add
+      </span>
+    </mat-icon>
+    Create New
+  </button>
+</div>
+
+<app-table
+  [data]="tableData"
+  [displayedColumns]="columnsToDisplay"
+  [headers]="columnHeadersToDisplay"
+/>

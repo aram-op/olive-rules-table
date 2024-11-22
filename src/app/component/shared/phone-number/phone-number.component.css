@@ -1,0 +1,62 @@
+.phone-number-input-container {
+  display: flex;
+  align-items: center;
+}
+
+.phone-number-input-container mat-select {
+  background: transparent;
+  height: 35px;
+  width: 72px;
+}
+
+.phone-number-input-container input {
+  height: 35px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19.1px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  padding-left: 10px;
+  color: var(--forms-secondary-color);
+}
+
+.phone-number-input-container input:focus {
+  outline: none;
+}
+
+span {
+  font-size: 25px;
+  font-weight: 100;
+  color: var(--form-field-outline-secondary-color);
+}
+
+.phone-number-input-container ::ng-deep.mat-mdc-select-trigger {
+  height: 35px;
+  width: 50px;
+  text-align: center;
+  line-height: 0px;
+  padding: 0;
+}
+
+::ng-deep.code-select-panel.mat-mdc-select-panel {
+  min-width: 281px;
+  background-color: var(--main-background-color);
+  padding: 0;
+}
+
+::ng-deep.code-select-panel.mat-mdc-select-panel span {
+  font-family: var(--main-font);
+  font-size: 15px;
+}
+
+mat-form-field {
+  width: 75px;
+  --mdc-outlined-text-field-focus-outline-width: 0;
+  --mdc-outlined-text-field-outline-width: 0;
+  text-align: center;
+}

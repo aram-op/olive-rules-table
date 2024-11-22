@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BalanceCombinedInputComponent } from '../app/component/balance-combined-input/balance-combined-input.component';
+import { BalanceCombinedInputComponent } from '../app/component/rules-engine/balance-combined-input/balance-combined-input.component';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {BehaviorSubject, of} from 'rxjs';
 

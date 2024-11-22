@@ -1,0 +1,199 @@
+.information-flex-container {
+  display: flex;
+  min-height: 283px;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.profile-card {
+  width: 320px;
+  height: 283px;
+  box-shadow: 0px 0px 4px 0px #00000040;
+  border-radius: 4px;
+  padding: 32px 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo-and-name-container {
+  display: flex;
+  align-items: center;
+  min-height: 75px;
+  height: fit-content;
+}
+
+.logo-and-name-container img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  align-self: start;
+}
+
+.name-container {
+  padding-left: 15px;
+  min-height: 75px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.name-container .name {
+  font-family: var(--main-font);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 32.74px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.name-container .id {
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.82px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.status-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-container .status {
+  background-color: var(--form-field-outline-secondary-color);
+  height: 29px;
+  padding: 3px 15px 3px 8px;
+  border-radius: 39px;
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24.55px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+}
+
+.status-container .material-symbols-outlined {
+  margin-right: 8px;
+  font-size: 12px;
+  color: var(--primary-color);
+}
+
+.status-container .creation-date {
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.82px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000000;
+}
+
+.other-info-grid-container {
+  display: grid;
+  width: calc(100% - 320px);
+  padding: 0 20px;
+  gap: 0 50px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 55px 55px 55px 130px;
+}
+
+.other-info-grid-container p {
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24.55px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-wrap: nowrap;
+}
+
+.other-info-grid-container p b {
+  font-weight: 600;
+}
+
+.description-container {
+  grid-row: 4;
+  grid-column: 1/span 2;
+}
+
+.description-container p {
+  margin-top: 10px;
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24.55px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000000;
+  text-wrap: pretty;
+}
+
+.description-container span {
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24.55px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000000;
+}
+
+.modules-container {
+  margin-top: 15px;
+  width: 100%;
+  min-height: 302px;
+  box-shadow: 0px 0px 4px 0px #00000040;
+  border-radius: 4px;
+  padding: 25px 23px 0 25px;
+  display: grid;
+  grid-template-columns: calc(100% - 236px) 236px;
+  grid-template-rows: 80px;
+  grid-auto-rows: 50px;
+}
+
+.modules-container h3 {
+  font-family: var(--main-font);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32.74px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000000;
+}
+
+.modules-container button {
+  width: 236px;
+  --mdc-filled-button-container-height: 39px;
+  --mdc-filled-button-container-shape: 8px;
+  --mdc-filled-button-container-color: var(--secondary-color);
+  --mdc-filled-button-label-text-weight: 400;
+  --mdc-filled-button-label-text-font: var(--main-font);
+  --mdc-filled-button-label-text-size: 20px;
+  --mdc-filled-button-label-text-color: #FFFFFF;
+  --mat-filled-button-ripple-color: transparent;
+}
+
+.modules-container p {
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24.55px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000000;
+}

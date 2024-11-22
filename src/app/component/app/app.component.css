@@ -8,7 +8,7 @@ mat-sidenav-container {
 
 mat-sidenav {
   width: 259px;
-  background: #E8E8E8;
+  background: var(--primary-color);
   --mat-sidenav-container-shape: 0;
 }
 
@@ -44,32 +44,19 @@ mat-nav-list {
   padding: 0;
 }
 
-mat-list-item {
+mat-nav-list a {
+  padding-left: 30px;
   border-radius: 0;
   width: 259px;
   --mdc-list-list-item-one-line-container-height: 54px;
-
-}
-
-mat-list-item:hover {
-  border-radius: 0;
-}
-
-mat-list-item span {
-  font-family: var(--main-font);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: #000000;
-  padding-left: 10px;
-  text-decoration: none;
-}
-
-matlist-item a:active {
-  color: #000000;
+  --mdc-list-list-item-label-text-font: var(--main-font);
+  --mdc-list-list-item-label-text-color: #000000;
+  --mdc-list-list-item-label-text-size: 18px;
+  --mdc-list-list-item-label-text-weight: 400;
+  --mdc-list-list-item-label-text-line-height: 24px;
+  --mat-list-active-indicator-color: #D9D9D9;
+  --mdc-list-list-item-focus-state-layer-color: #D9D9D9;
+  --mdc-list-list-item-focus-state-layer-opacity: 0;
 }
 
 mat-toolbar {
@@ -77,7 +64,7 @@ mat-toolbar {
   top: 0;
   left: 259px;
   z-index: 2;
-  background: #E8E8E8;
+  background: var(--primary-color);
   height: 100px;
   width: calc(100% - 259px);
   min-width: fit-content;
@@ -122,7 +109,7 @@ mat-toolbar {
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #565656;
+  color: var(--forms-secondary-color);
 }
 
 .admin-info div {

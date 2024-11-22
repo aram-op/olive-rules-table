@@ -1,0 +1,69 @@
+<app-heading [headings]="headings"/>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <h2>Basic info:</h2>
+
+  <div class="grid-container">
+    <div class="input-container">
+      <mat-label>*Client Name:</mat-label>
+      <mat-form-field appearance="outline">
+        <input type="text" placeholder="name" matInput formControlName="clientName">
+      </mat-form-field>
+    </div>
+
+    <div class="input-container">
+      <mat-label>Contact Person:</mat-label>
+      <mat-form-field appearance="outline">
+        <input type="text" placeholder="name" matInput formControlName="contactPersonName">
+      </mat-form-field>
+    </div>
+
+    <div class="input-container">
+      <mat-label>*Email Address:</mat-label>
+      <mat-form-field appearance="outline">
+        <input type="text" placeholder="email" matInput formControlName="email">
+      </mat-form-field>
+    </div>
+
+    <div class="input-container">
+      <mat-label>Phone Number:</mat-label>
+      <mat-form-field appearance="outline" class="phone-number-field">
+        <phone-number-input formControlName="phoneNumber"/>
+      </mat-form-field>
+    </div>
+
+    <div class="input-container">
+      <mat-label>Address:</mat-label>
+      <mat-form-field appearance="outline">
+        <input type="text" placeholder="type address" matInput formControlName="address">
+      </mat-form-field>
+    </div>
+
+    <div class="input-container">
+      <mat-label>Logo:</mat-label>
+      <div class="upload-button-container">
+        <button type="button" mat-stroked-button>Upload</button>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <mat-label>*Country:</mat-label>
+      <mat-form-field appearance="fill" class="country-selector">
+        <mat-select panelClass="select-panel" formControlName="country" #countrySelect>
+          <mat-option value="armenia">Armenia</mat-option>
+          <mat-option value="jordan">Jordan</mat-option>
+        </mat-select>
+        <mat-icon matSuffix><span class="material-symbols-rounded">keyboard_arrow_down</span></mat-icon>
+      </mat-form-field>
+    </div>
+
+    <div class="description-container">
+      <mat-label>Description:</mat-label>
+      <mat-form-field appearance="outline">
+        <textarea matInput placeholder="Type description" formControlName="description"></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <button type="submit" mat-flat-button class="create-button">Create</button>
+</form>

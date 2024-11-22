@@ -14,12 +14,25 @@
     <h1>Olive</h1>
 
     <mat-nav-list>
-      <mat-list-item><span>Dashboard</span></mat-list-item>
-      <mat-list-item (click)="navigateTo('/rules')"><span>Rules Engine</span></mat-list-item>
-      <mat-list-item><span>Accounts</span></mat-list-item>
-      <mat-list-item><span>Billing</span></mat-list-item>
-      <mat-list-item><span>User Management</span></mat-list-item>
-      <mat-list-item><span>Settings</span></mat-list-item>
+      <a mat-list-item>Dashboard</a>
+      <a
+         routerLink="rules"
+         routerLinkActive
+         #rulesActive="routerLinkActive"
+         [activated]="rulesActive.isActive"
+         mat-list-item
+      >Rules Engine</a>
+
+      <a
+        routerLink="accounts"
+        routerLinkActive
+        #accountsActive=routerLinkActive
+        [activated]="accountsActive.isActive"
+        mat-list-item
+      >Accounts</a>
+      <a mat-list-item>Billing</a>
+      <a mat-list-item>User Management</a>
+      <a mat-list-item>Settings</a>
     </mat-nav-list>
   </mat-sidenav>
 

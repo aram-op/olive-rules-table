@@ -1,0 +1,32 @@
+.heading-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  min-width: fit-content;
+}
+
+.create-button {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  height: 51px;
+  width: 232px;
+  font-family: var(--main-font);
+  box-shadow: none;
+  font-weight: 600;
+  font-size: 20px;
+  --mat-fab-ripple-color: transparent;
+  --mdc-extended-fab-container-shape: 8px;
+  --mdc-extended-fab-focus-container-elevation-shadow: 0;
+  --mdc-extended-fab-hover-container-elevation-shadow: 0;
+  --mdc-extended-fab-pressed-container-elevation-shadow: 0;
+  --mat-fab-state-layer-color: #e0e0e0;
+  --mat-fab-pressed-state-layer-opacity: 0.2;
+}
+
+:host ::ng-deep .actions-icon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+}

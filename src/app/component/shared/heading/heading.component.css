@@ -1,0 +1,12 @@
+h1 {
+  color: #000000;
+  font-family: var(--main-font);
+  font-size: 26px;
+  font-weight: 700;
+  text-wrap: nowrap;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
+}

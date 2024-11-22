@@ -1,5 +1,5 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {RulesComponent} from '../app/component/rules/rules.component';
+import {RulesComponent} from '../app/component/rules-engine/rules/rules.component';
 import {provideRouter, Router} from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import RULES from '../rules.json';

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1287443",
+    "clientName": "Aram Tadevosyan",
+    "email": "dummyEmail@example.com",
+    "status": "active",
+    "country": "Armenia",
+    "creationDate": "11/21/2024",
+    "logoUrl": "assets/country-flags/flag-armenia.png",
+    "contactPersonName": "Lorem Ipsum",
+    "phoneNumber": "+962788888888",
+    "address": "Amman - Abdoun - Street 4",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "moduleIds": ["1", "2", "3", "4"]
+  }
+]

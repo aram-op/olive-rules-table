@@ -1,0 +1,12 @@
+<div class="heading-container">
+  <h1>Accounts Management</h1>
+
+  <button type="button" class="create-button" mat-flat-button (click)="onCreateAccount()">Create Account</button>
+</div>
+
+<app-table
+  [displayedColumns]="columnsToDisplay"
+  [headers]="columnHeadersToDisplay"
+  [data]="data"
+  (rowSelected)="onAccountSelected($event)"
+/>

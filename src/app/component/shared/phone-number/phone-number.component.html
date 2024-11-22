@@ -1,0 +1,33 @@
+<div
+  role="group"
+  class="phone-number-input-container"
+  [formGroup]="parts"
+  [attr.aria-labelledby]="_formField?.getLabelId()"
+  (focusin)="onFocusIn()"
+  (focusout)="onFocusOut($event)"
+>
+  <mat-form-field appearance="outline">
+    <mat-select
+      formControlName="countryCode"
+      (input)="_handleInput(parts.controls.countryCode, number)"
+      panelClass="code-select-panel"
+      #countryCode
+    >
+      <mat-select-trigger>
+        <img src="./assets/flags-for-phone-number-field/{{countryCode.value}}.svg" width="30px" height="25px">
+      </mat-select-trigger>
+      <mat-option value="+374">
+        +374, Armenia
+      </mat-option>
+      <mat-option value="+962">
+        +962, Jordan
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <span>|</span>
+  <input
+    formControlName="number"
+    (input)="_handleInput(parts.controls.number)"
+    #number
+  />
+</div>

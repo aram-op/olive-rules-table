@@ -1,0 +1,44 @@
+<app-heading [headings]="headings"/>
+
+<div class="information-flex-container">
+  <div class="profile-card">
+    <div class="logo-and-name-container">
+      <img [src]="account.logoUrl" alt="logo" height="75px" width="75px"/>
+      <div class="name-container">
+        <p class="name">{{ account.clientName }}</p>
+        <p class="id">ID: {{ account.id }}</p>
+      </div>
+    </div>
+
+    <div class="status-container">
+      <span class="creation-date">Created: {{ account.creationDate }}</span>
+      <span class="status">
+        <span class="material-symbols-outlined">circle</span>
+        {{ account.status[0].toUpperCase() + account.status.slice(1) }}
+      </span>
+    </div>
+  </div>
+
+  <div class="other-info-grid-container">
+    <p><b>Email: </b>{{ account.email }}</p>
+    <p><b>Country: </b>{{ account.country }}</p>
+    <p><b>Contact Person: </b>{{ account.contactPersonName }}</p>
+    <p><b>Phone Number: </b>{{ account.phoneNumber }}</p>
+    <p><b>Address: </b>{{ account.address }}</p>
+
+    <div class="description-container">
+      <span>Description:</span>
+      <p>{{ account.description }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="modules-container">
+  <h3>Modules</h3>
+  <button mat-flat-button>Enroll Modules</button>
+
+  @for(module of modules; track module.id) {
+    <p>{{module.name}}</p>
+    <p>{{module.status}}</p>
+  }
+</div>
