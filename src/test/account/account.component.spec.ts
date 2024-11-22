@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeadingComponent } from '../app/component/shared/heading/heading.component';
+import { AccountComponent } from '../../app/component/accounts/account/account.component';
 
-describe('HeadingComponent', () => {
-  let component: HeadingComponent;
-  let fixture: ComponentFixture<HeadingComponent>;
+describe('AccountComponent', () => {
+  let component: AccountComponent;
+  let fixture: ComponentFixture<AccountComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeadingComponent]
+      imports: [AccountComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HeadingComponent);
+    fixture = TestBed.createComponent(AccountComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

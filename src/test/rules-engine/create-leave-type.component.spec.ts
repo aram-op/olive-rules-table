@@ -1,6 +1,6 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {CreateLeaveTypeComponent} from '../app/component/rules-engine/create-leave-type/create-leave-type.component';
+import {CreateLeaveTypeComponent} from '../../app/component/rules-engine/create-leave-type/create-leave-type.component';
 import {ActivatedRoute, provideRouter, Router} from '@angular/router';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {of} from 'rxjs';

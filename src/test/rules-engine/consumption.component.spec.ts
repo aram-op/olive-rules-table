@@ -1,6 +1,6 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {ConsumptionComponent} from '../app/component/rules-engine/consumption/consumption.component';
+import {ConsumptionComponent} from '../../app/component/rules-engine/consumption/consumption.component';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {By} from '@angular/platform-browser';
 import {DebugElement, input} from '@angular/core';

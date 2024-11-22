@@ -1,8 +1,8 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {TableComponent} from '../app/component/shared/table/table.component';
+import {TableComponent} from '../../app/component/shared/table/table.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {TableData} from '../app/model/table-data.model';
+import {TableData} from '../../app/model/table-data.model';
 import {By} from '@angular/platform-browser';
 import {DebugElement} from '@angular/core';
 
