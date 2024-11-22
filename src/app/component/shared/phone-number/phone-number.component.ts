@@ -28,15 +28,15 @@ import {
 } from '@angular/forms';
 import {MAT_FORM_FIELD, MatFormField, MatFormFieldControl,} from '@angular/material/form-field';
 import {Subject} from 'rxjs';
-import {PhoneNumber} from '../component/shared/phone-number/phone-number.model';
+import {PhoneNumber} from '../../../model/phone-number.model';
 import {MatOption, MatSelect, MatSelectTrigger} from '@angular/material/select';
 import {DomSanitizer} from '@angular/platform-browser';
 import {MatIconRegistry} from '@angular/material/icon';
 
 @Component({
   selector: 'phone-number-input',
-  templateUrl: '../component/shared/phone-number/phone-number.component.html',
-  styleUrl: '../component/shared/phone-number/phone-number.component.css',
+  templateUrl: './phone-number.component.html',
+  styleUrl: './phone-number.component.css',
   providers: [{provide: MatFormFieldControl, useExisting: PhoneNumberInput}],
   host: {
     '[class.example-floating]': 'shouldLabelFloat',
@@ -142,12 +142,10 @@ export class PhoneNumberInput implements ControlValueAccessor, MatFormFieldContr
     });
 
     effect(() => {
-      // Read signals to trigger effect.
       this._placeholder();
       this._required();
       this._disabled();
       this._focused();
-      // Propagate state changes.
       untracked(() => this.stateChanges.next());
     });
 
@@ -218,13 +216,6 @@ export class PhoneNumberInput implements ControlValueAccessor, MatFormFieldContr
   }
 
   onContainerClick() {
-    // if (this.parts.controls.number.valid) {
-    //   this._focusMonitor.focusVia(this.numberInput(), 'program');
-    // } else if (this.parts.controls.countryCode.valid) {
-    //   this._focusMonitor.focusVia(this.countryCodeInput()._elementRef.nativeElement, 'program');
-    // } else {
-    //   this._focusMonitor.focusVia(this.numberInput(), 'program');
-    // }
   }
 
   writeValue(phoneNumber: PhoneNumber | null): void {

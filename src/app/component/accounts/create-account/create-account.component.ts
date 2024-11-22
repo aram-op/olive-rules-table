@@ -4,7 +4,7 @@ import {MatInput} from '@angular/material/input';
 import {MatButton} from '@angular/material/button';
 import {MatOption, MatSelect, MatSelectTrigger} from '@angular/material/select';
 import {MatIcon} from '@angular/material/icon';
-import {PhoneNumberInput} from '../../../model/phone-number.component';
+import {PhoneNumberInput} from '../../shared/phone-number/phone-number.component';
 import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 import {HeadingComponent} from '../../shared/heading/heading.component';
 
@@ -52,6 +52,5 @@ export class CreateAccountComponent {
 
   onSubmit() {
     //can't implement yet
-    console.log(this.form.value)
   }
 }

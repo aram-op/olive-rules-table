@@ -17,7 +17,6 @@ export class HeadingComponent implements AfterViewInit{
 
   ngAfterViewInit() {
     const links: HTMLAnchorElement[] = this.elementRef.nativeElement.querySelectorAll('a');
-    console.log(links)
 
     for(let i = 0; i < links.length - 1; i++) {
       links[i].textContent += ' > ';
