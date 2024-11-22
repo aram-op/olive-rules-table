@@ -27,6 +27,11 @@ customPaginatorIntl.getRangeLabel = (page: number, pageSize: number, length: num
   return `${start} - ${end} out of ${length}`
 }
 
+
+/**
+ * Universal component for displaying any data with table.
+ * The user can specify the templates to be displayed inside table cells.
+ */
 @Component({
   selector: 'app-table',
   standalone: true,

@@ -20,6 +20,11 @@ import {HeadingComponent} from '../../shared/heading/heading.component';
 export class AccountComponent implements OnInit {
   account!: Account;
   modules: LeaveType[];
+  /**
+   * Will be passed as an input to HeadingComponent.
+   * The keys should be the path that will be passed to routerLink.
+   * The values should be the heading texts
+   */
   headings: Map<string, string>;
 
   constructor(private route: ActivatedRoute, private destroyRef: DestroyRef) {

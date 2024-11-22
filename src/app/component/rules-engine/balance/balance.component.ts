@@ -39,6 +39,7 @@ import {BehaviorSubject} from 'rxjs';
   styleUrl: './balance.component.css'
 })
 export class BalanceComponent implements OnInit {
+  //Based on this property the balance component will have additional fields
   @Input({required: true}) isThroughBalance!: boolean;
   @Output() formValueChanged = new EventEmitter();
   isExtendedBalanceDisabled$ = new BehaviorSubject(true);

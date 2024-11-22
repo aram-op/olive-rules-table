@@ -31,9 +31,31 @@ export class LeaveTypesComponent implements OnInit {
   ruleId: string = '';
   country: string = '';
   data: LeaveType[] = [];
+
+
+  /**
+   * Will be passed to the TableComponent as an input.
+   * Represents the data that will be passed to mat table datasource in TableComponent.
+   */
   tableData: TableData[] = [];
+
+  //Will be passed to the TableComponent as an input. Represents the column definitions for mat-table.
   columnsToDisplay = ['name', 'validity', 'status', 'actions'];
+
+
+  /**
+   * Will be passed to the TableComponent as an input.
+   * The keys should match the column definitions.
+   * Values represent the text that will be inserted in the header cell for specified column.
+   */
   columnHeadersToDisplay = new Map<string, string>;
+
+
+  /**
+   * Will be passed as an input to HeadingComponent.
+   * The keys should be the path that will be passed to routerLink.
+   * The values should be the heading texts
+   */
   headings: Map<string, string> = new Map();
 
   ngOnInit() {

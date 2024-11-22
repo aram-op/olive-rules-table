@@ -33,6 +33,13 @@ import {MatOption, MatSelect, MatSelectTrigger} from '@angular/material/select';
 import {DomSanitizer} from '@angular/platform-browser';
 import {MatIconRegistry} from '@angular/material/icon';
 
+
+/**
+ * Custom component for phone number field which has country codes selector and number input.
+ * Can be used inside mat-form-field.
+ * Can be used with reactive forms.
+ * The value of this field is a string with country code and number concatenated.
+ */
 @Component({
   selector: 'phone-number-input',
   templateUrl: './phone-number.component.html',

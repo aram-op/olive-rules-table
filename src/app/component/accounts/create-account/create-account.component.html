@@ -28,6 +28,11 @@
     <div class="input-container">
       <mat-label>Phone Number:</mat-label>
       <mat-form-field appearance="outline" class="phone-number-field">
+        <!--
+        Custom input phone number field.
+        Contains mat select with country code options and an input inside it.
+        The value is a single string that contains country code and number concatenated.
+         -->
         <phone-number-input formControlName="phoneNumber"/>
       </mat-form-field>
     </div>

@@ -20,10 +20,32 @@ import {HeadingComponent} from '../../shared/heading/heading.component';
 export class AccountsManagementComponent {
   private router = inject(Router);
   private route = inject(ActivatedRoute);
+
+  //Will be passed to the TableComponent as an input. Represents the column definitions for mat-table.
   columnsToDisplay: string[] = ['id', 'name', 'email', 'status', 'actions'];
+
+
+  /**
+   * Will be passed to the TableComponent as an input.
+   * The keys should match the column definitions.
+   * Values represent the text that will be inserted in the header cell for specified column.
+   */
   columnHeadersToDisplay: Map<string, string> = new Map();
-  headings: Map<string, string>;
+
+
+  /**
+   * Will be passed to the TableComponent as an input.
+   * Represents the data that will be passed to mat table datasource in TableComponent.
+   */
   data: TableData[] = [];
+
+
+  /**
+   * Will be passed as an input to HeadingComponent.
+   * The keys should be the path that will be passed to routerLink.
+   * The values should be the heading texts
+   */
+  headings: Map<string, string>;
 
   constructor() {
     this.headings = new Map();

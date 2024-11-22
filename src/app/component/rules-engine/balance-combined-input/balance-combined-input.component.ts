@@ -5,6 +5,11 @@ import {NgClass} from '@angular/common';
 import {MatInput} from '@angular/material/input';
 import {BehaviorSubject} from 'rxjs';
 
+/**
+ * Custom component for a balance field that has both matInput and matSelect inside it.
+ * It is a FormGroup. On every value change the FormGroup will be emitted with the event.
+ * When using this, make sure to have a child formGroup with matching controls inside your formGroup.
+ */
 @Component({
   selector: 'app-balance-combined-input',
   standalone: true,

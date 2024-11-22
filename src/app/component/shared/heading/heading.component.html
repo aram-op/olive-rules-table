@@ -1,3 +1,7 @@
+<!--
+  Clicking on each part of the heading, will navigate to the specified part of the page.
+  Purpose of creating this functionality is to give the user opportunity to navigate back from some pages.
+-->
 <h1>
   @for (heading of headings.entries(); track heading[0]) {
     <a [routerLink]="heading[0]">{{heading[1]}}</a>

@@ -53,6 +53,12 @@ export class CreateLeaveTypeComponent implements OnInit {
   isDateRangeDisplayed = false;
   isThroughBalance = true;
   rule?: Rule;
+
+  /**
+   * Will be passed as an input to HeadingComponent.
+   * The keys should be the path that will be passed to routerLink.
+   * The values should be the heading texts
+   */
   headings: Map<string, string> = new Map();
 
   form = new FormGroup({
