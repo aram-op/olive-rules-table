@@ -39,18 +39,7 @@ export class AccountsManagementComponent {
    */
   data: TableData[] = [];
 
-
-  /**
-   * Will be passed as an input to HeadingComponent.
-   * The keys should be the path that will be passed to routerLink.
-   * The values should be the heading texts
-   */
-  headings: Map<string, string>;
-
   constructor() {
-    this.headings = new Map();
-    this.headings.set('./', 'Accounts Management');
-
     for (let account of ACCOUNTS) {
       const templates = new Map<string, string>();
 
