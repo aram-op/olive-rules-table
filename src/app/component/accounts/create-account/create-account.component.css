@@ -36,7 +36,7 @@ mat-form-field {
   --mat-form-field-container-text-line-height: 19px;
   --mat-form-field-container-text-size: 14px;
   --mat-form-field-container-text-weight: 600;
-  --mat-form-field-container-vertical-padding: 10px;
+  --mat-form-field-container-vertical-padding: 8px;
   --mdc-outlined-text-field-caret-color: var(--forms-secondary-color);
   --mdc-outlined-text-field-container-shape: 8px;
   --mdc-outlined-text-field-focus-outline-color: var(--forms-secondary-color);
