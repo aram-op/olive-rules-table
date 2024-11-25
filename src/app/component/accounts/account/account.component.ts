@@ -34,7 +34,7 @@ export class AccountComponent implements OnInit {
       const account: Account | undefined = ACCOUNTS.find((account: Account) => params['accountId'] === account.id);
 
       if (!account) {
-        throw new Error(`Account with id: ${params['id']} was not found!`);
+        throw new Error(`Account with id: ${params['accountId']} was not found!`);
       }
       this.account = account;
     });
