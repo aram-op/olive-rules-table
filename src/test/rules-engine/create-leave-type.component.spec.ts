@@ -1,12 +1,11 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {CreateLeaveTypeComponent} from '../../app/component/rules-engine/create-leave-type/create-leave-type.component';
+import {CreateLeaveTypeComponent} from '../../app/pages/create-leave-type/create-leave-type.component';
 import {ActivatedRoute, provideRouter, Router} from '@angular/router';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {of} from 'rxjs';
 import {By} from '@angular/platform-browser';
 import {provideNativeDateAdapter} from '@angular/material/core';
-import {inject} from '@angular/core';
 
 describe('CreateLeaveTypeComponent', () => {
   let component: CreateLeaveTypeComponent;
@@ -144,7 +143,8 @@ describe('CreateLeaveTypeComponent', () => {
       const buttonElem = fixture.debugElement.query(By.css('.cancel-button'));
 
       jest.spyOn(component, 'onCancel');
-      jest.spyOn(router, 'navigate').mockImplementation(() => new Promise(() => {}));
+      jest.spyOn(router, 'navigate').mockImplementation(() => new Promise(() => {
+      }));
 
       buttonElem.triggerEventHandler('click');
     });

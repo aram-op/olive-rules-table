@@ -1,10 +1,8 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {RulesComponent} from '../../app/component/rules-engine/rules/rules.component';
+import {RulesComponent} from '../../app/pages/rules/rules.component';
 import {ActivatedRoute, provideRouter, Router} from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import RULES from '../../rules.json';
 import {By} from '@angular/platform-browser';
-import spyOn = jest.spyOn;
 import {of} from 'rxjs';
 
 describe('RulesComponent', () => {
@@ -65,7 +63,8 @@ describe('RulesComponent', () => {
     });
 
     it('should use .navigate() of Router to navigate to leave types page', () => {
-      jest.spyOn(router, 'navigate').mockImplementation().mockReturnValue(new Promise(() => {}));
+      jest.spyOn(router, 'navigate').mockImplementation().mockReturnValue(new Promise(() => {
+      }));
 
       component.navigateToLeavesPage({id: 1, model: {module: 'Leaves'}});
 

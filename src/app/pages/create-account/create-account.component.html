@@ -1,27 +1,27 @@
 <app-heading [headings]="headings"/>
 
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
   <h2>Basic info:</h2>
 
   <div class="grid-container">
     <div class="input-container">
       <mat-label>*Client Name:</mat-label>
       <mat-form-field appearance="outline">
-        <input type="text" placeholder="name" matInput formControlName="clientName">
+        <input formControlName="clientName" matInput placeholder="name" type="text">
       </mat-form-field>
     </div>
 
     <div class="input-container">
       <mat-label>Contact Person:</mat-label>
       <mat-form-field appearance="outline">
-        <input type="text" placeholder="name" matInput formControlName="contactPersonName">
+        <input formControlName="contactPersonName" matInput placeholder="name" type="text">
       </mat-form-field>
     </div>
 
     <div class="input-container">
       <mat-label>*Email Address:</mat-label>
       <mat-form-field appearance="outline">
-        <input type="text" placeholder="email" matInput formControlName="email">
+        <input formControlName="email" matInput placeholder="email" type="text">
       </mat-form-field>
     </div>
 
@@ -40,21 +40,21 @@
     <div class="input-container">
       <mat-label>Address:</mat-label>
       <mat-form-field appearance="outline">
-        <input type="text" placeholder="type address" matInput formControlName="address">
+        <input formControlName="address" matInput placeholder="type address" type="text">
       </mat-form-field>
     </div>
 
     <div class="input-container">
       <mat-label>Logo:</mat-label>
       <div class="upload-button-container">
-        <button type="button" mat-stroked-button>Upload</button>
+        <button mat-stroked-button type="button">Upload</button>
       </div>
     </div>
 
     <div class="input-container">
       <mat-label>*Country:</mat-label>
       <mat-form-field appearance="fill" class="country-selector">
-        <mat-select panelClass="select-panel" formControlName="country" #countrySelect>
+        <mat-select #countrySelect formControlName="country" panelClass="select-panel">
           <mat-option value="armenia">Armenia</mat-option>
           <mat-option value="jordan">Jordan</mat-option>
         </mat-select>
@@ -65,10 +65,10 @@
     <div class="description-container">
       <mat-label>Description:</mat-label>
       <mat-form-field appearance="outline">
-        <textarea matInput placeholder="Type description" formControlName="description"></textarea>
+        <textarea formControlName="description" matInput placeholder="Type description"></textarea>
       </mat-form-field>
     </div>
   </div>
 
-  <button type="submit" mat-flat-button class="create-button">Create</button>
+  <button class="create-button" mat-flat-button type="submit">Create</button>
 </form>

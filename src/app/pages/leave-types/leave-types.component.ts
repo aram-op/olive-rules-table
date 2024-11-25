@@ -1,15 +1,15 @@
 import {Component, inject, OnInit} from '@angular/core';
-import RULES from '../../../../rules.json';
-import LEAVE_TYPES from '../../../../leave-types.json'
+import RULES from '../../../rules.json';
+import LEAVE_TYPES from '../../../leave-types.json'
 import {ActivatedRoute, Router} from '@angular/router';
-import {LeaveType} from '../../../model/leave-type.model';
-import {TableComponent} from '../../shared/table/table.component';
+import {LeaveType} from '../../model/leave-type.model';
+import {TableComponent} from '../../component/shared/table/table.component';
 import {MatButton, MatFabButton} from '@angular/material/button';
 import {MatIcon} from '@angular/material/icon';
 import {MatPrefix} from '@angular/material/form-field';
-import {TableData} from '../../../model/table-data.model';
-import {Rule} from '../../../model/rule.model';
-import {HeadingComponent} from '../../shared/heading/heading.component';
+import {TableData} from '../../model/table-data.model';
+import {Rule} from '../../model/rule.model';
+import {HeadingComponent} from '../../component/shared/heading/heading.component';
 
 @Component({
   selector: 'app-leave-types',

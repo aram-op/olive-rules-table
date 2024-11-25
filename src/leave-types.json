@@ -1,38 +1,38 @@
 [
   {
-    "id" :  "1",
-    "name" : "Annual",
+    "id": "1",
+    "name": "Annual",
     "validity": "Limited",
-    "status" : "Draft"
+    "status": "Draft"
   },
   {
-    "id" :  "2",
-    "name" : "Sick",
+    "id": "2",
+    "name": "Sick",
     "validity": "Unlimited",
-    "status" : "Active"
+    "status": "Active"
   },
   {
-    "id" :  "3",
-    "name" : "Maternity",
+    "id": "3",
+    "name": "Maternity",
     "validity": "Unlimited",
-    "status" : "Inactive"
+    "status": "Inactive"
   },
   {
-    "id" :  "4",
-    "name" : "Pilgrimage",
+    "id": "4",
+    "name": "Pilgrimage",
     "validity": "Unlimited",
-    "status" : "Draft"
+    "status": "Draft"
   },
   {
-    "id" :  "5",
-    "name" : "Not Paid",
+    "id": "5",
+    "name": "Not Paid",
     "validity": "Unlimited",
-    "status" : "Draft"
+    "status": "Draft"
   },
   {
-    "id" :  "6",
-    "name" : "Annual",
+    "id": "6",
+    "name": "Annual",
     "validity": "Limited",
-    "status" : "Draft"
+    "status": "Draft"
   }
 ]

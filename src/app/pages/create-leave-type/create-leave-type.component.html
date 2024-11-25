@@ -19,7 +19,7 @@
 
     <mat-label>Unit:</mat-label>
     <mat-form-field appearance="outline">
-      <mat-select placeholder="Select" formControlName="unit" panelClass="select-panel">
+      <mat-select formControlName="unit" panelClass="select-panel" placeholder="Select">
         <mat-option value="days">Days</mat-option>
         <mat-option value="hours">Hours</mat-option>
         <mat-option value="days&hours">Days & Hours</mat-option>
@@ -34,7 +34,7 @@
 
     <mat-label>Gender:</mat-label>
     <mat-form-field appearance="outline">
-      <mat-select placeholder="Select" formControlName="gender" panelClass="select-panel">
+      <mat-select formControlName="gender" panelClass="select-panel" placeholder="Select">
         <mat-option value="male">Male</mat-option>
         <mat-option value="female">Female</mat-option>
         <mat-option value="all">All</mat-option>
@@ -50,7 +50,7 @@
 
     <mat-label>Employment Type:</mat-label>
     <mat-form-field appearance="outline">
-      <mat-select placeholder="Select" formControlName="employmentType" panelClass="select-panel">
+      <mat-select formControlName="employmentType" panelClass="select-panel" placeholder="Select">
         <mat-option value="full-time">Full Time</mat-option>
         <mat-option value="part-time">Part Time</mat-option>
       </mat-select>
@@ -118,8 +118,8 @@
   }
 
   <div class="button-container">
-    <button type="button" mat-button class="cancel-button" (click)="onCancel()">Cancel</button>
-    <button type="button" mat-stroked-button class="save-button">Save As Draft</button>
-    <button type="submit" mat-flat-button class="create-button" (click)="onSubmit()">Create</button>
+    <button (click)="onCancel()" class="cancel-button" mat-button type="button">Cancel</button>
+    <button class="save-button" mat-stroked-button type="button">Save As Draft</button>
+    <button (click)="onSubmit()" class="create-button" mat-flat-button type="submit">Create</button>
   </div>
 </form>

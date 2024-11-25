@@ -3,8 +3,8 @@
 </div>
 
 <app-table
+  (rowSelected)="navigateToLeavesPage($event)"
   [data]="data"
   [displayedColumns]="columnsToDisplay"
   [headers]="columnHeadersToDisplay"
-  (rowSelected)="navigateToLeavesPage($event)"
 />

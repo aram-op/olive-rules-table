@@ -1,9 +1,8 @@
 import {Component, inject} from '@angular/core';
-import RULES from '../../../../rules.json';
-import {TableComponent} from '../../shared/table/table.component';
+import RULES from '../../../rules.json';
+import {TableComponent} from '../../component/shared/table/table.component';
 import {ActivatedRoute, Router} from '@angular/router';
-import {TableData} from '../../../model/table-data.model';
-import {routes} from '../../../app.routes';
+import {TableData} from '../../model/table-data.model';
 
 @Component({
   selector: 'app-rules',
@@ -15,26 +14,21 @@ import {routes} from '../../../app.routes';
   styleUrl: './rules.component.css'
 })
 export class RulesComponent {
-  private router = inject(Router);
-  private route = inject(ActivatedRoute);
-
-
   /**
    * Will be passed to the TableComponent as an input.
    * Represents the data that will be passed to mat table datasource in TableComponent.
    */
   data: TableData[] = [];
-
   //Will be passed to the TableComponent as an input. Represents the column definitions for mat-table.
   columnsToDisplay = ['name', 'module', 'country', 'status', 'actions'];
-
-
   /**
    * Will be passed to the TableComponent as an input.
    * The keys should match the column definitions.
    * Values represent the text that will be inserted in the header cell for specified column.
    */
   columnHeadersToDisplay = new Map<string, string>();
+  private router = inject(Router);
+  private route = inject(ActivatedRoute);
 
   constructor() {
     for (let rule of RULES) {

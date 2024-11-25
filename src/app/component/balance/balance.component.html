@@ -42,8 +42,8 @@
     <div class="extended-balance-container">
       <label>Extended Balance:</label>
       <app-balance-combined-input
-        [isDisabled$]="isExtendedBalanceDisabled$"
         (formValueChanged)="setExtendedBalanceForm($event)"
+        [isDisabled$]="isExtendedBalanceDisabled$"
       />
     </div>
 

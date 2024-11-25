@@ -4,9 +4,9 @@ import {MatInput} from '@angular/material/input';
 import {MatButton} from '@angular/material/button';
 import {MatOption, MatSelect, MatSelectTrigger} from '@angular/material/select';
 import {MatIcon} from '@angular/material/icon';
-import {PhoneNumberInput} from '../../shared/phone-number/phone-number.component';
+import {PhoneNumberInput} from '../../component/shared/phone-number/phone-number.component';
 import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
-import {HeadingComponent} from '../../shared/heading/heading.component';
+import {HeadingComponent} from '../../component/shared/heading/heading.component';
 
 @Component({
   selector: 'app-create-account',

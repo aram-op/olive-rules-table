@@ -11,10 +11,9 @@ import {RouterLink} from '@angular/router';
   styleUrl: './heading.component.css'
 })
 export class HeadingComponent implements AfterViewInit {
-  private elementRef = inject(ElementRef);
-
   //The keys should be the paths to navigate. The values should be the header text parts displayed.
   @Input({required: true}) headings!: Map<string, string>;
+  private elementRef = inject(ElementRef);
 
   ngAfterViewInit() {
     const links: HTMLAnchorElement[] = this.elementRef.nativeElement.querySelectorAll('a');

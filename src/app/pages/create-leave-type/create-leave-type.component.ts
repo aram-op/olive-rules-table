@@ -5,11 +5,11 @@ import {MatRadioButton, MatRadioGroup} from '@angular/material/radio';
 import {MatOption, MatSelect} from '@angular/material/select';
 import {MatButton} from '@angular/material/button';
 import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
-import {BalanceComponent} from '../balance/balance.component';
-import {ConsumptionComponent} from '../consumption/consumption.component';
+import {BalanceComponent} from '../../component/balance/balance.component';
+import {ConsumptionComponent} from '../../component/consumption/consumption.component';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Rule} from '../../../model/rule.model';
-import RULES from '../../../../rules.json';
+import {Rule} from '../../model/rule.model';
+import RULES from '../../../rules.json';
 import {
   MatDatepicker,
   MatDatepickerInput,
@@ -17,7 +17,7 @@ import {
   MatDatepickerToggleIcon
 } from '@angular/material/datepicker';
 import {MatIcon} from '@angular/material/icon';
-import {HeadingComponent} from '../../shared/heading/heading.component';
+import {HeadingComponent} from '../../component/shared/heading/heading.component';
 
 @Component({
   selector: 'app-create-leave-type',

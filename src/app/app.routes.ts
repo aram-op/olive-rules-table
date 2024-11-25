@@ -1,10 +1,10 @@
 import {Routes} from '@angular/router';
-import {RulesComponent} from './component/rules-engine/rules/rules.component';
-import {LeaveTypesComponent} from './component/rules-engine/leave-types/leave-types.component';
-import {CreateLeaveTypeComponent} from './component/rules-engine/create-leave-type/create-leave-type.component';
-import {AccountsManagementComponent} from './component/accounts/accounts-management/accounts-management.component';
-import {CreateAccountComponent} from './component/accounts/create-account/create-account.component';
-import {AccountComponent} from './component/accounts/account/account.component';
+import {RulesComponent} from './pages/rules/rules.component';
+import {LeaveTypesComponent} from './pages/leave-types/leave-types.component';
+import {CreateLeaveTypeComponent} from './pages/create-leave-type/create-leave-type.component';
+import {AccountsManagementComponent} from './pages/accounts-management/accounts-management.component';
+import {CreateAccountComponent} from './pages/create-account/create-account.component';
+import {AccountComponent} from './pages/account/account.component';
 
 export const routes: Routes = [
   {

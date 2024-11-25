@@ -1,6 +1,6 @@
 <div class="table-container">
   <mat-form-field appearance="outline" class="rules-search">
-    <input matInput type="text" placeholder="Search" [formControl]="searchInput">
+    <input [formControl]="searchInput" matInput placeholder="Search" type="text">
     <mat-icon matSuffix>
     <span class="material-symbols-rounded">
       search
@@ -8,7 +8,7 @@
     </mat-icon>
   </mat-form-field>
 
-  <table mat-table [dataSource]="dataSource">
+  <table [dataSource]="dataSource" mat-table>
     @for (columnName of displayedColumns; track columnName) {
       <ng-container [matColumnDef]="columnName">
         <th mat-header-cell *matHeaderCellDef>{{ headers.get(columnName) }}</th>
@@ -21,8 +21,8 @@
       </ng-container>
     }
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onRowSelected(row)"></tr>
+    <tr *matHeaderRowDef="displayedColumns; sticky: true" mat-header-row></tr>
+    <tr (click)="onRowSelected(row)" *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
   </table>
 </div>
 

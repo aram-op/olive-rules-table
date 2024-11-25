@@ -24,14 +24,11 @@ import {
   FormsModule,
   NgControl,
   ReactiveFormsModule,
-  Validators,
 } from '@angular/forms';
 import {MAT_FORM_FIELD, MatFormField, MatFormFieldControl,} from '@angular/material/form-field';
 import {Subject} from 'rxjs';
 import {PhoneNumber} from '../../../model/phone-number.model';
 import {MatOption, MatSelect, MatSelectTrigger} from '@angular/material/select';
-import {DomSanitizer} from '@angular/platform-browser';
-import {MatIconRegistry} from '@angular/material/icon';
 
 
 /**
@@ -77,20 +74,60 @@ export class PhoneNumberInput implements ControlValueAccessor, MatFormFieldContr
     transform: booleanAttribute,
   });
   readonly _value = model<PhoneNumber | null>(null, {alias: 'value'});
-  onChange = (_: any) => {
-  };
-  onTouched = () => {
-  };
-
   protected readonly _formField = inject(MAT_FORM_FIELD, {
     optional: true,
   });
-
   private readonly _focused = signal(false);
   private readonly _disabledByCva = signal(false);
   private readonly _disabled = computed(() => this._disabledByInput() || this._disabledByCva());
   private readonly _focusMonitor = inject(FocusMonitor);
   private readonly _elementRef = inject<ElementRef<HTMLElement>>(ElementRef);
+
+  constructor() {
+    if (this.ngControl != null) {
+      this.ngControl.valueAccessor = this;
+    }
+
+    this.parts = inject(FormBuilder).group({
+      countryCode: ['+374'],
+      number: ['']
+    });
+
+    effect(() => {
+      this._placeholder();
+      this._required();
+      this._disabled();
+      this._focused();
+      untracked(() => this.stateChanges.next());
+    });
+
+    effect(() => {
+      if (this._disabled()) {
+        untracked(() => this.parts.disable());
+      } else {
+        untracked(() => this.parts.enable());
+      }
+    });
+
+    effect(() => {
+      const value = this._value() || new PhoneNumber('', '');
+      untracked(() => this.parts.setValue(value));
+    });
+
+    this.parts.statusChanges.pipe(takeUntilDestroyed()).subscribe(() => {
+      this.stateChanges.next();
+    });
+
+    this.parts.valueChanges.pipe(takeUntilDestroyed()).subscribe(value => {
+      const tel = this.parts.valid
+        ? new PhoneNumber(
+          this.parts.value.countryCode || '',
+          this.parts.value.number || '',
+        )
+        : null;
+      this._updateValue(tel);
+    });
+  }
 
   get focused(): boolean {
     return this._focused();
@@ -138,51 +175,11 @@ export class PhoneNumberInput implements ControlValueAccessor, MatFormFieldContr
     return this.parts.invalid && this.touched();
   }
 
-  constructor() {
-    if (this.ngControl != null) {
-      this.ngControl.valueAccessor = this;
-    }
+  onChange = (_: any) => {
+  };
 
-    this.parts = inject(FormBuilder).group({
-      countryCode: ['+374'],
-      number: ['']
-    });
-
-    effect(() => {
-      this._placeholder();
-      this._required();
-      this._disabled();
-      this._focused();
-      untracked(() => this.stateChanges.next());
-    });
-
-    effect(() => {
-      if (this._disabled()) {
-        untracked(() => this.parts.disable());
-      } else {
-        untracked(() => this.parts.enable());
-      }
-    });
-
-    effect(() => {
-      const value = this._value() || new PhoneNumber('', '');
-      untracked(() => this.parts.setValue(value));
-    });
-
-    this.parts.statusChanges.pipe(takeUntilDestroyed()).subscribe(() => {
-      this.stateChanges.next();
-    });
-
-    this.parts.valueChanges.pipe(takeUntilDestroyed()).subscribe(value => {
-      const tel = this.parts.valid
-        ? new PhoneNumber(
-          this.parts.value.countryCode || '',
-          this.parts.value.number || '',
-        )
-        : null;
-      this._updateValue(tel);
-    });
-  }
+  onTouched = () => {
+  };
 
   ngOnDestroy() {
     this.stateChanges.complete();

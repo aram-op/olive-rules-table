@@ -1,5 +1,5 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {AppComponent} from '../app/component/app/app.component';
+import {AppComponent} from '../app/app.component';
 import {HarnessLoader} from '@angular/cdk/testing';
 import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
 import {MatToolbarHarness} from '@angular/material/toolbar/testing';

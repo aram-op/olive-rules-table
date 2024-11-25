@@ -2,7 +2,7 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {
   AccountsManagementComponent
-} from '../../app/component/accounts/accounts-management/accounts-management.component';
+} from '../../app/pages/accounts-management/accounts-management.component';
 import {ActivatedRoute, provideRouter, Router} from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {of} from 'rxjs';

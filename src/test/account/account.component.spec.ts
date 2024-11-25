@@ -1,6 +1,6 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {AccountComponent} from '../../app/component/accounts/account/account.component';
+import {AccountComponent} from '../../app/pages/account/account.component';
 import {ActivatedRoute, provideRouter} from '@angular/router';
 import {of} from 'rxjs';
 import {Account} from '../../app/model/account.model';

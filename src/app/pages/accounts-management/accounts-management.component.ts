@@ -1,10 +1,10 @@
 import {Component, inject} from '@angular/core';
 import {MatButton} from '@angular/material/button';
-import {TableComponent} from '../../shared/table/table.component';
-import {TableData} from '../../../model/table-data.model';
-import ACCOUNTS from '../../../../accounts.json';
+import {TableComponent} from '../../component/shared/table/table.component';
+import {TableData} from '../../model/table-data.model';
+import ACCOUNTS from '../../../accounts.json';
 import {ActivatedRoute, Router} from '@angular/router';
-import {HeadingComponent} from '../../shared/heading/heading.component';
+import {HeadingComponent} from '../../component/shared/heading/heading.component';
 
 @Component({
   selector: 'app-accounts-management',
@@ -18,26 +18,21 @@ import {HeadingComponent} from '../../shared/heading/heading.component';
   styleUrl: './accounts-management.component.css'
 })
 export class AccountsManagementComponent {
-  private router = inject(Router);
-  private route = inject(ActivatedRoute);
-
   //Will be passed to the TableComponent as an input. Represents the column definitions for mat-table.
   columnsToDisplay: string[] = ['id', 'name', 'email', 'status', 'actions'];
-
-
   /**
    * Will be passed to the TableComponent as an input.
    * The keys should match the column definitions.
    * Values represent the text that will be inserted in the header cell for specified column.
    */
   columnHeadersToDisplay: Map<string, string> = new Map();
-
-
   /**
    * Will be passed to the TableComponent as an input.
    * Represents the data that will be passed to mat table datasource in TableComponent.
    */
   data: TableData[] = [];
+  private router = inject(Router);
+  private route = inject(ActivatedRoute);
 
   constructor() {
     for (let account of ACCOUNTS) {

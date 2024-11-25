@@ -1,11 +1,11 @@
 import {Component, DestroyRef, OnInit} from '@angular/core';
-import ACCOUNTS from '../../../../accounts.json';
-import LEAVE_TYPES from '../../../../leave-types.json';
-import {Account} from '../../../model/account.model';
+import ACCOUNTS from '../../../accounts.json';
+import LEAVE_TYPES from '../../../leave-types.json';
+import {Account} from '../../model/account.model';
 import {ActivatedRoute} from '@angular/router';
 import {MatButton} from '@angular/material/button';
-import {LeaveType} from '../../../model/leave-type.model';
-import {HeadingComponent} from '../../shared/heading/heading.component';
+import {LeaveType} from '../../model/leave-type.model';
+import {HeadingComponent} from '../../component/shared/heading/heading.component';
 
 @Component({
   selector: 'app-account',
@@ -41,7 +41,7 @@ export class AccountComponent implements OnInit {
 
     this.headings = new Map();
     this.headings.set('../', 'Accounts Management');
-    this.headings.set('./',this.account.clientName);
+    this.headings.set('./', this.account.clientName);
 
     this.destroyRef.onDestroy(() => subscription.unsubscribe());
   }
@@ -51,7 +51,7 @@ export class AccountComponent implements OnInit {
       for (let id of this.account.moduleIds) {
         const module: LeaveType | undefined = LEAVE_TYPES.find((leaveType: LeaveType) => leaveType.id === id);
 
-        if(module) this.modules.push(module);
+        if (module) this.modules.push(module);
       }
     }
   }

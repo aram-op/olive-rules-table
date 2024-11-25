@@ -1,10 +1,9 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {CreateAccountComponent} from '../../app/component/accounts/create-account/create-account.component';
+import {CreateAccountComponent} from '../../app/pages/create-account/create-account.component';
 import {provideRouter} from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {By} from '@angular/platform-browser';
-import {DebugElement} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 describe('CreateAccountComponent', () => {
